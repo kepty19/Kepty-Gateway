@@ -1368,6 +1368,8 @@ p {
   color: var(--ivory-dim);
   max-width: 46rem;
 }
+
+.footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
