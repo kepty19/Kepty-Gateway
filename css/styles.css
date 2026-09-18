@@ -547,10 +547,11 @@ p {
 
 .ticker__mark {
   font-family: var(--display);
-  font-size: 0.7rem;
-  letter-spacing: 0.46em;
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
   color: var(--gold-bright);
-  padding-left: 0.46em;
+  padding-left: 0.22em;
+  white-space: nowrap;
 }
 
 .ticker__word {
