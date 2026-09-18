@@ -1059,13 +1059,43 @@ p {
   color: var(--ivory-dim);
 }
 
+.coach-other {
+  margin-top: 1.5rem;
+  padding: 1.15rem 1.15rem 1.2rem 1.25rem;
+  border: 1px solid var(--gold-dim);
+  border-left: 2px solid var(--gold);
+  background: rgba(8, 8, 8, 0.55);
+  box-shadow: inset 0 1px 0 rgba(208, 164, 106, 0.12);
+}
+
+.coach-single__copy .coach-other__kicker {
+  font-family: var(--display);
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.55rem;
+}
+
+.coach-other h4 {
+  font-size: 1.15rem;
+  font-weight: 400;
+  margin: 0 0 0.55rem;
+  color: var(--ivory);
+}
+
+.coach-other p {
+  color: var(--ivory-dim);
+  font-size: 0.92rem;
+}
+
 .coach__ig {
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
-  margin-top: 1.25rem;
+  margin-top: 0.95rem;
   color: var(--gold);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   letter-spacing: 0.04em;
   border-bottom: 1px solid var(--gold-dim);
   padding-bottom: 0.15rem;
@@ -1245,7 +1275,27 @@ p {
   margin: 0 auto 2rem;
 }
 
-.footer {
+.faq__list {
+  display: grid;
+  gap: 1px;
+  background: var(--gold-dim);
+  border: 1px solid var(--gold-dim);
+}
+
+.faq__item {
+  background: var(--ink);
+  padding: clamp(1.3rem, 2.4vw, 1.9rem);
+}
+
+.faq__item h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.55rem;
+}
+
+.faq__item p {
+  color: var(--ivory-dim);
+  max-width: 46rem;
+}
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
