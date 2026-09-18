@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kepty19.github.io/football-private-lesson/sitemap.xml
+Sitemap: https://keptyfootballclub.com/sitemap.xml
