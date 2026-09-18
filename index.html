@@ -73,7 +73,7 @@
       <section class="hero" id="top">
         <div class="hero__media" aria-hidden="true">
           <img
-            src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=2400&q=80"
+            src="./assets/hero-pitch.jpg"
             alt=""
           />
         </div>
@@ -242,27 +242,45 @@
           </ul>
         </div>
         <div class="phone" aria-hidden="true">
-          <div class="phone__bezel">
-            <div class="phone__screen">
-              <p class="phone__brand">Atelier</p>
-              <p class="phone__player">Player · Tokyo</p>
-              <div class="phone__card">
-                <span>Season aim</span>
-                <p>Become the most reliable midfielder in the side.</p>
+          <div class="iphone">
+            <span class="iphone__btn iphone__btn--silent"></span>
+            <span class="iphone__btn iphone__btn--vol-up"></span>
+            <span class="iphone__btn iphone__btn--vol-down"></span>
+            <span class="iphone__btn iphone__btn--power"></span>
+            <div class="iphone__frame">
+              <div class="iphone__screen">
+                <div class="iphone__island"></div>
+                <div class="iphone__status">
+                  <span>9:41</span>
+                  <span class="iphone__status-end">
+                    <svg viewBox="0 0 18 12" aria-hidden="true"><path d="M1 8.5h2.2V11H1zM5 6h2.2v5H5zM9 3.5h2.2V11H9zM13 1h2.2v10H13z" /></svg>
+                    <svg viewBox="0 0 16 12" aria-hidden="true"><path d="M1 4.2c2.4-2.3 6.3-2.3 8.7 0 .4.4.4 1 0 1.3-.3.3-.9.3-1.2 0-1.7-1.6-4.6-1.6-6.3 0-.3.3-.9.3-1.2 0-.4-.4-.4-1 0-1.3z" /><path d="M3.1 6.4c1.3-1.2 3.3-1.2 4.6 0 .3.3.3.8 0 1.1-.3.3-.8.3-1.1 0-.7-.6-1.7-.6-2.4 0-.3.3-.8.3-1.1 0-.3-.3-.3-.8 0-1.1z" /><circle cx="5.4" cy="9.3" r="1.15" /></svg>
+                    <span class="iphone__battery"><i></i></span>
+                  </span>
+                </div>
+                <div class="iphone__app">
+                  <p class="phone__brand">Atelier</p>
+                  <p class="phone__player">Player · Tokyo</p>
+                  <div class="phone__card">
+                    <span>Season aim</span>
+                    <p>Become the most reliable midfielder in the side.</p>
+                  </div>
+                  <div class="phone__card">
+                    <span>Today’s focus</span>
+                    <p>Receive on the half-turn. First touch into space.</p>
+                  </div>
+                  <div class="phone__card phone__card--gold">
+                    <span>Homework</span>
+                    <ul class="phone__list">
+                      <li>Wall-pass series · 8 minutes</li>
+                      <li>Weak-foot driven pass · 40</li>
+                      <li>Juggling, both feet · 100</li>
+                    </ul>
+                  </div>
+                  <p class="phone__note">“Quality over speed. Open the hip before the ball arrives.”</p>
+                </div>
+                <div class="iphone__home"></div>
               </div>
-              <div class="phone__card">
-                <span>Today’s focus</span>
-                <p>Receive on the half-turn. First touch into space.</p>
-              </div>
-              <div class="phone__card phone__card--gold">
-                <span>Homework</span>
-                <ul class="phone__list">
-                  <li>Wall-pass series · 8 minutes</li>
-                  <li>Weak-foot driven pass · 40</li>
-                  <li>Juggling, both feet · 100</li>
-                </ul>
-              </div>
-              <p class="phone__note">“Quality over speed. Open the hip before the ball arrives.”</p>
             </div>
           </div>
         </div>
@@ -412,12 +430,19 @@
           </p>
         </div>
         <article class="coach-single reveal">
-          <figure class="coach-single__portrait">
-            <img
-              src="./assets/ceo-tomohiro-kajiyama.png"
-              alt="Tomohiro Kajiyama, Founder and CEO of Kepty Co., Ltd."
-            />
-          </figure>
+          <div class="coach-single__visual">
+            <figure class="coach-single__portrait">
+              <img
+                src="./assets/ceo-tomohiro-kajiyama.png"
+                alt="Tomohiro Kajiyama, Founder and CEO of Kepty Co., Ltd."
+              />
+            </figure>
+            <div class="coach-gallery">
+              <img src="./assets/coach-play-01.jpg" alt="Celebration after a goal in Australia" />
+              <img src="./assets/coach-play-02.jpg" alt="Tomohiro Kajiyama running onto the ball in a professional match" />
+              <img src="./assets/coach-play-03.jpg" alt="Tomohiro Kajiyama on the ball against an opponent" />
+            </div>
+          </div>
           <div class="coach-single__copy">
             <p class="coach__role">Founder &amp; CEO, Kepty Co., Ltd.</p>
             <h3>Tomohiro Kajiyama</h3>
@@ -431,6 +456,23 @@
               education business Quipper. He then founded Kepty Co., Ltd., and now coaches young players
               in Tokyo in English: privately, and over time.
             </p>
+            <p>
+              Through Kepty Co., Ltd. he also runs a separate English-learning service for current
+              professional footballers. That work is English coaching — not Football Private Lesson.
+            </p>
+            <a
+              class="coach__ig"
+              href="https://www.instagram.com/kepty.19/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
+                <circle cx="12" cy="12" r="3.6" />
+                <circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" stroke="none" />
+              </svg>
+              English coaching on Instagram · @kepty.19
+            </a>
           </div>
         </article>
       </section>
@@ -457,7 +499,8 @@
       <div class="enquiry__panel" role="dialog" aria-modal="true" aria-labelledby="enquiry-title">
         <button class="enquiry__close" type="button" data-close-enquiry aria-label="Close">Close</button>
         <h2 id="enquiry-title">Enquiry</h2>
-        <form class="enquiry__form" id="enquiry-form" action="mailto:contact@kepty.co" method="post" enctype="text/plain">
+        <form class="enquiry__form" id="enquiry-form">
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="enquiry__honey" />
           <label>
             <span>Name <i aria-hidden="true">*</i></span>
             <input type="text" name="name" required autocomplete="name" />
@@ -470,8 +513,9 @@
             <span>Message <i aria-hidden="true">*</i></span>
             <textarea name="message" rows="5" required></textarea>
           </label>
-          <button class="btn btn--gold" type="submit">Send enquiry</button>
+          <button class="btn btn--gold" type="submit" id="enquiry-submit">Send enquiry</button>
         </form>
+        <p class="enquiry__error" id="enquiry-error" hidden></p>
         <p class="enquiry__thanks" id="enquiry-thanks" hidden>
           Your note has been received. We will be in touch privately.
         </p>

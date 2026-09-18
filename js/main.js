@@ -39,10 +39,14 @@ document.querySelectorAll(".reveal").forEach((el, index) => {
   observer.observe(el);
 });
 
+const submitBtn = document.getElementById("enquiry-submit");
+const errorEl = document.getElementById("enquiry-error");
+
 const openEnquiry = () => {
   enquiry.hidden = false;
   form.hidden = false;
   thanks.hidden = true;
+  if (errorEl) errorEl.hidden = true;
   form.reset();
   document.body.style.overflow = "hidden";
   menu.hidden = true;
@@ -82,16 +86,50 @@ menu.querySelectorAll("a").forEach((link) => {
   });
 });
 
-form.addEventListener("submit", (event) => {
+form.addEventListener("submit", async (event) => {
   event.preventDefault();
+  if (errorEl) errorEl.hidden = true;
+  if (form.elements._honey && form.elements._honey.value) return;
+
   const name = form.elements.name.value.trim();
   const email = form.elements.email.value.trim();
   const message = form.elements.message.value.trim();
-  const subject = encodeURIComponent("Football Private Lesson enquiry");
-  const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
-  window.location.href = `mailto:contact@kepty.co?subject=${subject}&body=${body}`;
-  form.hidden = true;
-  thanks.hidden = false;
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Sending…";
+
+  try {
+    const response = await fetch("https://formsubmit.co/ajax/contact@kepty.co", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        message,
+        _subject: "Football Private Lesson enquiry",
+        _captcha: "false",
+        _template: "table",
+      }),
+    });
+    const payload = await response.json().catch(() => ({}));
+    if (!response.ok) {
+      throw new Error(payload.message || "Could not send");
+    }
+    form.hidden = true;
+    thanks.hidden = false;
+  } catch (err) {
+    if (errorEl) {
+      errorEl.textContent =
+        "The message could not be sent. Please try again, or email contact@kepty.co directly.";
+      errorEl.hidden = false;
+    }
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Send enquiry";
+  }
 });
 
 document.addEventListener("keydown", (event) => {
