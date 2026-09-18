@@ -12,7 +12,6 @@
   --serif: "Cormorant Garamond", "Times New Roman", serif;
   --display: "Cinzel", "Times New Roman", serif;
   --sans: "Outfit", "Helvetica Neue", sans-serif;
-  --mincho: "Zen Old Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
   --pad: clamp(1.25rem, 4vw, 4.5rem);
   --max: 1180px;
 }
@@ -456,13 +455,6 @@ p {
   font-size: clamp(1.18rem, 2.5vw, 1.62rem);
   font-weight: 500;
   line-height: 1.85;
-}
-
-.ja {
-  font-family: var(--mincho);
-  font-style: normal;
-  letter-spacing: 0.06em;
-  line-height: 1.95;
 }
 
 .hero__scroll {
