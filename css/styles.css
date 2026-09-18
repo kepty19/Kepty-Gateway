@@ -449,12 +449,12 @@ p {
 }
 
 .hero__lede {
-  max-width: 22em;
-  margin: 1.9rem 0 0;
-  color: var(--ivory);
-  font-size: clamp(1.18rem, 2.5vw, 1.62rem);
-  font-weight: 500;
-  line-height: 1.85;
+  max-width: 34rem;
+  margin: 1.7rem 0 0;
+  color: var(--ivory-dim);
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.7;
 }
 
 .hero__scroll {
@@ -1137,7 +1137,13 @@ p {
 
 .enquiry__panel h2 {
   font-size: 2.3rem;
-  margin-bottom: 1.4rem;
+  margin: 0.2rem 0 1.4rem;
+}
+
+.enquiry__form label span i {
+  font-style: normal;
+  color: var(--gold-bright);
+  margin-left: 0.2em;
 }
 
 .enquiry__form {

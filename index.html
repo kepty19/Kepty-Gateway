@@ -456,24 +456,19 @@
     <div class="enquiry" id="enquiry" hidden>
       <div class="enquiry__panel" role="dialog" aria-modal="true" aria-labelledby="enquiry-title">
         <button class="enquiry__close" type="button" data-close-enquiry aria-label="Close">Close</button>
-        <p class="eyebrow">Private consultation · Kepty Co., Ltd.</p>
-        <h2 id="enquiry-title">Tell us about the player.</h2>
-        <form class="enquiry__form" id="enquiry-form">
+        <h2 id="enquiry-title">Enquiry</h2>
+        <form class="enquiry__form" id="enquiry-form" action="mailto:contact@kepty.co" method="post" enctype="text/plain">
           <label>
-            Parent name
+            <span>Name <i aria-hidden="true">*</i></span>
             <input type="text" name="name" required autocomplete="name" />
           </label>
           <label>
-            Email
+            <span>Email <i aria-hidden="true">*</i></span>
             <input type="email" name="email" required autocomplete="email" />
           </label>
           <label>
-            Player’s age / year
-            <input type="text" name="age" placeholder="e.g. 11 · Year 6" required />
-          </label>
-          <label>
-            A note on the player
-            <textarea name="message" rows="4" placeholder="Position, school, what you would like to grow."></textarea>
+            <span>Message <i aria-hidden="true">*</i></span>
+            <textarea name="message" rows="5" required></textarea>
           </label>
           <button class="btn btn--gold" type="submit">Send enquiry</button>
         </form>

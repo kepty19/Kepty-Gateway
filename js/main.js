@@ -41,6 +41,9 @@ document.querySelectorAll(".reveal").forEach((el, index) => {
 
 const openEnquiry = () => {
   enquiry.hidden = false;
+  form.hidden = false;
+  thanks.hidden = true;
+  form.reset();
   document.body.style.overflow = "hidden";
   menu.hidden = true;
 };
@@ -81,6 +84,12 @@ menu.querySelectorAll("a").forEach((link) => {
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
+  const name = form.elements.name.value.trim();
+  const email = form.elements.email.value.trim();
+  const message = form.elements.message.value.trim();
+  const subject = encodeURIComponent("Football Private Lesson enquiry");
+  const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+  window.location.href = `mailto:contact@kepty.co?subject=${subject}&body=${body}`;
   form.hidden = true;
   thanks.hidden = false;
 });
