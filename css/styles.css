@@ -1089,9 +1089,13 @@ p {
 
 .coach-gallery img {
   width: 100%;
-  height: 118px;
+  height: 150px;
   object-fit: cover;
   border: 1px solid var(--gold-dim);
+}
+
+.coach-gallery img:nth-child(2) {
+  object-position: 20% 28%;
 }
 
 .coach-single__portrait {
