@@ -1,13 +1,20 @@
+import type { ContinentId } from "@/data/continents";
+
 export type LeagueCountry = {
   id: string;
   name: string;
   nameEn: string;
+  flag: string;
+  continent: ContinentId;
   structure: string[];
+  leaguePeriod: string;
   summerWindow: string;
   winterWindow: string;
   foreignCap: string;
+  asianQuota: string | null;
   visa: string;
-  japanMarket: string;
+  japanesePlayers: string;
+  japaneseNote: string;
 };
 
 export const LEAGUES: LeagueCountry[] = [
@@ -15,82 +22,106 @@ export const LEAGUES: LeagueCountry[] = [
     id: "spain",
     name: "スペイン",
     nameEn: "Spain",
+    flag: "es",
+    continent: "europe",
     structure: [
       "LaLiga（1部）",
       "LaLiga Hypermotion（2部）",
       "Primera Federación（3部）",
       "Segunda Federación（4部）",
     ],
+    leaguePeriod: "8月中旬 〜 翌5月下旬（LaLiga）",
     summerWindow: "7月上旬 〜 9月上旬（年度により前後）",
     winterWindow: "1月上旬 〜 2月上旬",
-    foreignCap: "非EU枠はクラブ登録枠で制限。EUパスポート保有は別扱い。",
-    visa: "就労許可＋連盟登録。下部ほど給与・契約形態の確認が必須。",
-    japanMarket:
-      "LaLiga直結より、3部〜4部と提携エージェント経由の着地が現実的。現地適応と出場機会を先に設計できる選手が残る。",
+    foreignCap: "非EU 3（1部の登録上限。EU国籍は別扱い）",
+    asianQuota: null,
+    visa: "就労許可＋連盟登録。EU外はクラブの雇用契約が前提。",
+    japanesePlayers: "約10",
+    japaneseNote: "1部〜2部の公開ロスター概数。下部は未集計。",
   },
   {
     id: "england",
     name: "イングランド",
     nameEn: "England",
+    flag: "gb-eng",
+    continent: "europe",
     structure: [
       "Premier League",
       "EFL Championship",
       "League One / Two",
       "National League 以下",
     ],
+    leaguePeriod: "8月 〜 翌5月（Premier / EFL）",
     summerWindow: "6月中旬 〜 8月末（年度により前後）",
     winterWindow: "1月1日 〜 1月末",
-    foreignCap: "国内枠というより、就労ビザ / GBE（Governing Body Endorsement）が実質の門。",
-    visa: "非英選手はGBEポイントとクラブのスポンサーライセンスが前提。",
-    japanMarket:
-      "プレミアより Championship〜League One、あるいはNPL相当の下部で実績を積むルート。戦う姿勢と自己主張が選考そのもの。",
+    foreignCap: "人数枠なし。実質の門は就労ビザ / GBE",
+    asianQuota: null,
+    visa: "Skilled Worker + GBE。クラブのスポンサーライセンスが必要。",
+    japanesePlayers: "約15",
+    japaneseNote: "プレミア〜リーグ下部の公開ロスター概数。",
   },
   {
     id: "germany",
     name: "ドイツ",
     nameEn: "Germany",
+    flag: "de",
+    continent: "europe",
     structure: ["Bundesliga", "2. Bundesliga", "3. Liga", "Regionalliga"],
+    leaguePeriod: "8月 〜 翌5月",
     summerWindow: "7月 〜 8月末",
     winterWindow: "1月 〜 2月初旬",
-    foreignCap: "EU外は労働許可と給与下限。3.Liga / Regionalligaはクラブごとに条件が分かれる。",
-    visa: "就労ビザ。シーズン契約と最低報酬の証明が必要になることが多い。",
-    japanMarket:
-      "2.Bundesliga / 3.Ligaが現実的な入口。身体と戦術理解が、現場で効く。",
+    foreignCap: "国籍の人数枠なし。非EUは労働許可と給与下限",
+    asianQuota: null,
+    visa: "就労ビザ / EU Blue Card。シーズン契約と報酬証明。",
+    japanesePlayers: "約20",
+    japaneseNote: "1部〜3部の公開ロスター概数。",
   },
   {
     id: "thailand",
     name: "タイ",
     nameEn: "Thailand",
+    flag: "th",
+    continent: "asia",
     structure: ["Thai League 1", "Thai League 2", "下部地域リーグ"],
-    summerWindow: "概ね5月 〜 7月（シーズン暦に依存）",
-    winterWindow: "概ね12月 〜 1月",
-    foreignCap: "外国人枠は年度改定が速い（本国枠＋ASEAN枠など）。最新告示の確認が必須。",
-    visa: "就労ビザ＋連盟登録。エージェント経由のクラブオファーが起点。",
-    japanMarket:
-      "J3〜アマ上位からの挑戦先として市場が開いている。給与はクラブ格差が大きい。まずは枠とウィンドウを先に読む。",
+    leaguePeriod: "8月 〜 翌5月（2025/26）",
+    summerWindow: "開幕前（概ね6〜7月、年度確認）",
+    winterWindow: "中盤（概ね12〜1月）",
+    foreignCap: "登録 非ASEAN 7 / 試合出場 5",
+    asianQuota: "ASEANは登録無制限・出場2。日本人はASEAN対象外のため非ASEAN枠。",
+    visa: "就労ビザ＋連盟登録。クラブオファーが起点。",
+    japanesePlayers: "8",
+    japaneseNote: "Thai League 1・2025/26公開ロスター。",
   },
   {
     id: "malaysia",
     name: "マレーシア",
     nameEn: "Malaysia",
+    flag: "my",
+    continent: "asia",
     structure: ["Malaysia Super League", "A1 Semi-Pro / 下部"],
-    summerWindow: "シーズン前（春〜初夏、年度確認）",
+    leaguePeriod: "8月 〜 翌5月（2025/26）",
+    summerWindow: "開幕前（夏、年度確認）",
     winterWindow: "中盤ウィンドウ（年度確認）",
-    foreignCap: "外国人登録枠あり。国籍ミックスの指定が出ることがある。",
+    foreignCap: "登録15 / 出場は世界枠4",
+    asianQuota: "出場 アジア1 ＋ ASEAN 1。日本人はアジア枠に入り得る。",
     visa: "就労パス。クラブがスポンサーとなるのが一般的。",
-    japanMarket:
-      "東南アジアでプロ契約を取りに行く選手の現実的な候補。『観光挑戦』ではなく、枠と代理人の質で結果が分かれる。",
+    japanesePlayers: "数名",
+    japaneseNote: "Super League公開ロスターの概数。",
   },
   {
     id: "australia",
     name: "オーストラリア",
     nameEn: "Australia",
+    flag: "au",
+    continent: "oceania",
     structure: ["A-League Men", "各州 NPL", "州下部"],
-    summerWindow: "A-Leagueは南半球暦。開幕前と中盤にウィンドウ。",
-    winterWindow: "NPLは州ごとに異なる。渡航前に州連盟カレンダーを確認。",
-    foreignCap: "A-Leagueはビザ外国人枠が限られる。NPLは州規則。",
-    visa: "スポーツ人材ビザ / 一時就労。クラブの公式オファーが前提。",
-    japanMarket:
-      "NPLでの出場機会が、A-Leagueや東南アジアへの次の材料になる。現地でのコミュニケーションと出場数が選考になる。",
+    leaguePeriod: "10月 〜 翌5月（A-League）",
+    summerWindow: "開幕前（南半球冬〜春、年度確認）",
+    winterWindow: "中盤。NPLは州ごとに異なる",
+    foreignCap: "ビザ選手 5（A-League）",
+    asianQuota: null,
+    visa: "Temporary Activity / スポーツ人材。クラブの公式オファーが前提。",
+    japanesePlayers: "数名〜十数名",
+    japaneseNote: "A-Leagueは数名。NPLを含めると十数名規模。",
   },
 ];

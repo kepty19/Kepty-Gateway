@@ -18,6 +18,8 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+        env:
+          CI: true
       - name: Prepare Pages
         run: |
           cp CNAME out/CNAME

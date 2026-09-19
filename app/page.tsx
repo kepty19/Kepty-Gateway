@@ -52,7 +52,7 @@ export default function HomePage() {
                 ユース・アカデミー世代
               </h3>
               <p className="mt-4 text-sm leading-relaxed text-mute">
-                短期集中遠征。本物の環境で成長する、次世代のためのグローバルプログラム。
+                現地アカデミーとクラブの提携先だけを置く。次世代のためのキュレーション。
               </p>
               <p className="mt-8 font-latin text-[0.68rem] uppercase tracking-[0.22em] text-gold">
                 ユース・アカデミー世代へ →
