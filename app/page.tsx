@@ -54,7 +54,7 @@ export default function HomePage() {
                 ユース・アカデミー世代
               </h3>
               <p className="mt-4 text-sm leading-relaxed text-mute">
-                現地アカデミーとクラブの提携先だけを置く。次世代のためのキュレーション。
+                現地の提携クラブ、企業、代理人を掲載しています。
               </p>
               <p className="mt-8 font-latin text-[0.68rem] uppercase tracking-[0.22em] text-gold">
                 ユース・アカデミー世代へ →
@@ -77,7 +77,7 @@ export default function HomePage() {
       </section>
 
       <ConsultForm
-        title="挑戦の地図を、静かに引きます。"
+        title="海外挑戦について、ご相談ください。"
         lede="プロ・大人世代、ユース・アカデミー世代、いずれでも。まずは非公開の相談から。"
         context="Gateway"
       />

@@ -121,7 +121,7 @@ export function JuniorPartners() {
                         </p>
                       </div>
                       <p className="font-latin text-[0.58rem] uppercase tracking-[0.16em] text-gold">
-                        {item.type}
+                        {item.kind}
                       </p>
                     </div>
                     <h3 className="mt-4 font-display text-2xl italic leading-snug">{item.name}</h3>
@@ -130,10 +130,6 @@ export function JuniorPartners() {
                       <div className="flex gap-3">
                         <dt className="w-16 shrink-0 text-mute/70">対象</dt>
                         <dd>{item.ages}</dd>
-                      </div>
-                      <div className="flex gap-3">
-                        <dt className="w-16 shrink-0 text-mute/70">形態</dt>
-                        <dd>{item.format}</dd>
                       </div>
                       <div className="flex gap-3">
                         <dt className="w-16 shrink-0 text-mute/70">時期</dt>

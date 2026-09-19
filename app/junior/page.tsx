@@ -4,7 +4,7 @@ import { ConsultForm } from "@/components/ConsultForm";
 
 export const metadata: Metadata = {
   title: "ユース・アカデミー世代",
-  description: "提携する現地アカデミーとクラブ。キュレーションされた入口だけを置く。",
+  description: "現地の提携クラブ、企業、代理人を掲載しています。",
 };
 
 export default function JuniorPage() {
@@ -23,7 +23,7 @@ export default function JuniorPage() {
             10代で世界の本物を体験する。人生を変える数日間。
           </h1>
           <p className="mt-6 max-w-2xl text-mute">
-            旅行商品の一覧ではない。Keptyが枠を持つ、現地の提携アカデミーとクラブだけを置く。
+            旅行商品の一覧ではありません。Keptyが提携する現地のクラブ、企業、代理人のみを掲載しています。
           </p>
         </div>
       </section>

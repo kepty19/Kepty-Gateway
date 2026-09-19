@@ -40,6 +40,6 @@ export const AGENT_DESKS: AgentDesk[] = [
     title: "Oceania Pathway Desk",
     focus: "A-League 周辺および州NPL",
     strength: "南半球シーズンへのタイミング設計とビザの順序。",
-    note: "州ごとの規則差が大きいため、個別に地図を引きます。",
+    note: "州ごとの規則差が大きいため、個別に確認します。",
   },
 ];
