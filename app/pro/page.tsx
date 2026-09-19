@@ -4,7 +4,7 @@ import { ConsultForm } from "@/components/ConsultForm";
 import { AGENT_DESKS } from "@/data/agents";
 
 export const metadata: Metadata = {
-  title: "Pro & Young Adults",
+  title: "プロ・大人世代",
   description: "世界でプロになるためのリーグ構造、移籍ウィンドウ、現地代理人デスク。",
 };
 
@@ -13,7 +13,7 @@ export default function ProPage() {
     <main className="pt-24">
       <section className="px-5 py-20 md:px-10">
         <div className="mx-auto max-w-page">
-          <p className="kicker mb-4">Pro & Young Adults</p>
+          <p className="kicker mb-4">Adult</p>
           <h1 className="max-w-3xl font-mincho text-4xl leading-tight md:text-5xl">
             世界でプロになる。そのための『解』がここにある。
           </h1>

@@ -11,7 +11,6 @@ export type Programme = {
   ages: string;
   focus: string;
   fee: string;
-  english: boolean;
 };
 
 export const PROGRAMMES: Programme[] = [
@@ -23,9 +22,8 @@ export const PROGRAMMES: Programme[] = [
     days: 8,
     school: "Madrid metropolitan training centre（提携）",
     ages: "小5 〜 中3",
-    focus: "高強度の技術反復と、英語でのポジション指示。",
+    focus: "高強度の技術反復と、ポジションごとの役割理解。",
     fee: "¥310,000〜",
-    english: true,
   },
   {
     id: "barcelona-summer",
@@ -35,9 +33,8 @@ export const PROGRAMMES: Programme[] = [
     days: 10,
     school: "Catalunya youth environment（提携）",
     ages: "小5 〜 高1",
-    focus: "小さなスペースでの判断と、主張する英語。",
+    focus: "小さなスペースでの判断と、主張するプレー。",
     fee: "¥340,000〜",
-    english: true,
   },
   {
     id: "london-summer",
@@ -47,9 +44,8 @@ export const PROGRAMMES: Programme[] = [
     days: 7,
     school: "Greater London academy partner",
     ages: "小5 〜 中3",
-    focus: "身体接触とテンポ。ピッチ英語の実戦。",
+    focus: "身体接触とテンポ。実戦での対人。",
     fee: "¥320,000〜",
-    english: true,
   },
   {
     id: "manchester-winter",
@@ -59,9 +55,8 @@ export const PROGRAMMES: Programme[] = [
     days: 7,
     school: "North West coaching partner",
     ages: "中1 〜 高1",
-    focus: "冬のピッチでの戦う姿勢と、短い指示の英語。",
+    focus: "冬のピッチでの戦う姿勢と、短いプレー判断。",
     fee: "¥300,000〜",
-    english: true,
   },
   {
     id: "munich-spring",
@@ -71,9 +66,8 @@ export const PROGRAMMES: Programme[] = [
     days: 8,
     school: "Bavaria youth partner",
     ages: "小5 〜 中3",
-    focus: "戦術の型と、英語での役割理解。",
+    focus: "戦術の型と、役割理解。",
     fee: "¥330,000〜",
-    english: true,
   },
   {
     id: "berlin-summer",
@@ -83,9 +77,8 @@ export const PROGRAMMES: Programme[] = [
     days: 9,
     school: "Berlin metropolitan partner",
     ages: "中1 〜 高1",
-    focus: "ゲームモデルの一端と、自己紹介できる英語。",
+    focus: "ゲームモデルの一端と、自己表現。",
     fee: "¥350,000〜",
-    english: true,
   },
 ];
 

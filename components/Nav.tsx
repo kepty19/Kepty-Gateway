@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const LINKS = [
   { href: "/", label: "Gateway" },
-  { href: "/pro/", label: "Pro" },
+  { href: "/pro/", label: "Adult" },
   { href: "/junior/", label: "Junior" },
 ];
 

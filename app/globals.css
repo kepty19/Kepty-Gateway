@@ -49,3 +49,26 @@ body {
     @apply border border-gold/25 bg-ink/60;
   }
 }
+
+.partner-track {
+  animation: partner-marquee 32s linear infinite;
+}
+
+.partner-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes partner-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - 0.5rem));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .partner-track {
+    animation: none;
+  }
+}

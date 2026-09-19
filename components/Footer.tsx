@@ -13,7 +13,7 @@ export function Footer() {
         </div>
         <div className="flex flex-wrap gap-x-8 gap-y-2 font-latin text-[0.68rem] uppercase tracking-[0.18em] text-mute">
           <Link href="/pro/" className="hover:text-gold">
-            Pro
+            Adult
           </Link>
           <Link href="/junior/" className="hover:text-gold">
             Junior

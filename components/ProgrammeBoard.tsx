@@ -58,16 +58,9 @@ export function ProgrammeBoard() {
       <div className="grid gap-4 md:grid-cols-2">
         {list.map((item) => (
           <article key={item.id} className="panel p-6">
-            <div className="flex items-start justify-between gap-3">
-              <p className="kicker">
-                {SEASON_LABEL[item.season]} · {COUNTRY_LABEL[item.country]}
-              </p>
-              {item.english ? (
-                <span className="font-latin text-[0.58rem] uppercase tracking-[0.16em] text-gold">
-                  Kepty English
-                </span>
-              ) : null}
-            </div>
+            <p className="kicker">
+              {SEASON_LABEL[item.season]} · {COUNTRY_LABEL[item.country]}
+            </p>
             <h3 className="mt-3 font-display text-2xl italic">{item.name}</h3>
             <p className="mt-1 text-sm text-mute">
               {item.days}日間 · {item.ages}

@@ -26,7 +26,7 @@ export const LEAGUES: LeagueCountry[] = [
     foreignCap: "非EU枠はクラブ登録枠で制限。EUパスポート保有は別扱い。",
     visa: "就労許可＋連盟登録。下部ほど給与・契約形態の確認が必須。",
     japanMarket:
-      "LaLiga直結より、3部〜4部と提携エージェント経由の着地が現実的。スペイン語とピッチ英語の両方を先に持つ選手が残る。",
+      "LaLiga直結より、3部〜4部と提携エージェント経由の着地が現実的。現地適応と出場機会を先に設計できる選手が残る。",
   },
   {
     id: "england",
@@ -43,7 +43,7 @@ export const LEAGUES: LeagueCountry[] = [
     foreignCap: "国内枠というより、就労ビザ / GBE（Governing Body Endorsement）が実質の門。",
     visa: "非英選手はGBEポイントとクラブのスポンサーライセンスが前提。",
     japanMarket:
-      "プレミアより Championship〜League One、あるいはNPL相当の下部で実績を積むルート。英語での自己主張が選考そのもの。",
+      "プレミアより Championship〜League One、あるいはNPL相当の下部で実績を積むルート。戦う姿勢と自己主張が選考そのもの。",
   },
   {
     id: "germany",
@@ -55,7 +55,7 @@ export const LEAGUES: LeagueCountry[] = [
     foreignCap: "EU外は労働許可と給与下限。3.Liga / Regionalligaはクラブごとに条件が分かれる。",
     visa: "就労ビザ。シーズン契約と最低報酬の証明が必要になることが多い。",
     japanMarket:
-      "2.Bundesliga / 3.Ligaが現実的な入口。身体と戦術理解に加え、ドイツ語より先に『ピッチで通る英語』が現場で効く。",
+      "2.Bundesliga / 3.Ligaが現実的な入口。身体と戦術理解が、現場で効く。",
   },
   {
     id: "thailand",
@@ -91,6 +91,6 @@ export const LEAGUES: LeagueCountry[] = [
     foreignCap: "A-Leagueはビザ外国人枠が限られる。NPLは州規則。",
     visa: "スポーツ人材ビザ / 一時就労。クラブの公式オファーが前提。",
     japanMarket:
-      "NPLでの出場機会が、A-Leagueや東南アジアへの次の材料になる。英語環境そのものが選考。",
+      "NPLでの出場機会が、A-Leagueや東南アジアへの次の材料になる。現地でのコミュニケーションと出場数が選考になる。",
   },
 ];
