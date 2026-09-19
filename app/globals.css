@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #0b0c10;
+  --gold: #c5a059;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--ink);
+  color: #f4f4f4;
+}
+
+::selection {
+  background: rgba(197, 160, 89, 0.35);
+}
+
+.grain {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  opacity: 0.07;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+}
+
+.gold-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(197, 160, 89, 0.55), transparent);
+}
+
+@layer components {
+  .kicker {
+    @apply font-latin text-[0.68rem] uppercase tracking-brand text-gold;
+  }
+  .btn-gold {
+    @apply inline-flex items-center justify-center border border-gold bg-gold px-6 py-3 font-latin text-[0.72rem] uppercase tracking-[0.22em] text-ink transition hover:bg-gold-bright;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center border border-gold/40 px-6 py-3 font-latin text-[0.72rem] uppercase tracking-[0.22em] text-ivory transition hover:border-gold hover:text-gold-bright;
+  }
+  .panel {
+    @apply border border-gold/25 bg-ink/60;
+  }
+}
