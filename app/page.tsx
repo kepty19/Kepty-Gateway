@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { ConsultForm } from "@/components/ConsultForm";
 import { PartnerTiers } from "@/components/PartnerTiers";
+import { OriginValue } from "@/components/OriginValue";
+import { Faq } from "@/components/Faq";
 
 export default function HomePage() {
   return (
@@ -62,6 +64,8 @@ export default function HomePage() {
         </div>
       </section>
 
+      <OriginValue />
+
       <section className="px-5 py-24 md:px-10">
         <div className="mx-auto max-w-page">
           <p className="kicker mb-4">Partners</p>
@@ -77,6 +81,7 @@ export default function HomePage() {
         lede="プロ・大人世代、ユース・アカデミー世代、いずれでも。まずは非公開の相談から。"
         context="Gateway"
       />
+      <Faq />
     </main>
   );
 }
