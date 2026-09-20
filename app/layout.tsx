@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: "%s | Kepty Global Gateway",
   },
   description:
-    "本気で海外を目指す選手のための、リアルなリーグ・移籍データベース。Kepty Co., Ltd.",
+    "本気で海外を目指す選手のための、リアルなリーグ・移籍データベース。株式会社Kepty",
   openGraph: {
     title: "Kepty Global Gateway",
     description: "世界へ挑む、すべてのフットボーラーへ。",

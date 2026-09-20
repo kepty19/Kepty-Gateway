@@ -5,7 +5,7 @@ import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "会社情報",
-  description: "Kepty Co., Ltd. 代表 梶山 知裕。",
+  description: "株式会社Kepty 代表 梶山 知裕。",
 };
 
 function Fact({
@@ -23,6 +23,21 @@ function Fact({
   );
 }
 
+function InstagramIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      className={className}
+      fill="currentColor"
+    >
+      <path d="M12 7.2A4.8 4.8 0 1 0 16.8 12 4.8 4.8 0 0 0 12 7.2Zm0 7.92A3.12 3.12 0 1 1 15.12 12 3.12 3.12 0 0 1 12 15.12Z" />
+      <path d="M17.04 2.16H6.96A4.8 4.8 0 0 0 2.16 6.96v10.08a4.8 4.8 0 0 0 4.8 4.8h10.08a4.8 4.8 0 0 0 4.8-4.8V6.96a4.8 4.8 0 0 0-4.8-4.8Zm3.12 14.88a3.12 3.12 0 0 1-3.12 3.12H6.96a3.12 3.12 0 0 1-3.12-3.12V6.96A3.12 3.12 0 0 1 6.96 3.84h10.08a3.12 3.12 0 0 1 3.12 3.12Z" />
+      <circle cx="17.52" cy="6.48" r="1.14" />
+    </svg>
+  );
+}
+
 export default function CompanyPage() {
   return (
     <main className="pt-24">
@@ -33,7 +48,7 @@ export default function CompanyPage() {
 
           <dl className="mt-4 max-w-3xl border-b border-gold/20">
             <Fact label="商号">
-              <p className="font-latin tracking-[0.04em]">{SITE.company}</p>
+              <p>{SITE.company}</p>
             </Fact>
             <Fact label="サービス">
               <p>{SITE.name}</p>
@@ -47,25 +62,15 @@ export default function CompanyPage() {
                   </p>
                 ))}
               </div>
-              <aside className="mt-8 border border-gold/25 border-l-2 border-l-gold bg-navy/30 p-5">
-                <p className="font-mincho text-[0.78rem] tracking-[0.14em] text-gold">
-                  {FOUNDER.otherKicker}
-                </p>
-                <h3 className="mt-2 font-mincho text-lg leading-snug text-ivory md:text-xl">
-                  {FOUNDER.otherTitle}
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-mute md:text-[0.95rem]">
-                  {FOUNDER.otherBody}
-                </p>
-                <a
-                  href={FOUNDER.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 inline-flex max-w-full items-center gap-2 break-all text-sm text-gold hover:text-gold-bright"
-                >
-                  {FOUNDER.instagramLabel}
-                </a>
-              </aside>
+              <a
+                href={FOUNDER.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex max-w-full items-start gap-2.5 text-sm leading-snug text-gold hover:text-gold-bright"
+              >
+                <InstagramIcon className="mt-0.5 h-5 w-5 shrink-0" />
+                <span>{FOUNDER.instagramLabel}</span>
+              </a>
             </Fact>
             <Fact label="Email">
               <p className="font-latin tracking-[0.02em] text-ivory">{SITE.email}</p>

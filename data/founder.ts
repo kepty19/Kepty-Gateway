@@ -2,12 +2,9 @@ export const FOUNDER = {
   nameJa: "梶山 知裕",
   instagram: "https://www.instagram.com/kepty.19/",
   paragraphs: [
-    "センアーノ神戸ユースU-18、関西大学を経て、オーストラリア NSW State League 1 で2シーズンプレー。2017年、同リーグで日本人として初めて得点王（Golden Boot）を受賞しました。",
-    "現役引退後、株式会社リクルートホールディングスにて、スタディサプリおよび Quipper の戦略に従事。その後、Kepty Co., Ltd. を創業し、東京で英語による個別指導を、時間をかけて行っています。",
+    "センアーノ神戸ユースU-18、関西大学を経て、2016年よりオーストラリアNSW州1部リーグで2シーズンプレー。2017年には同リーグにおいて日本人初となる年間得点王を獲得。",
+    "現役引退後、株式会社リクルートに入社。国内最大級の教育プロダクト「スタディサプリ」や、東南アジア（フィリピン・インドネシア）向けのグローバル教育事業「Quipper」にて事業戦略・企画に従事。",
+    "その後、株式会社Keptyを設立。2026年より、プロサッカー選手やユース・アカデミー世代に向けた英語学習サービス『Kepty English』を本格始動。",
   ],
-  otherKicker: "別サービス",
-  otherTitle: "現役プロサッカー選手向け英語コーチング",
-  otherBody:
-    "Kepty Co., Ltd. では、現役のプロサッカー選手向け英語コーチングも運営しています。Football Private Lesson とは別のサービスです。",
-  instagramLabel: "英語コーチング Instagram · @kepty.19",
+  instagramLabel: "プロサッカー選手向け英語コーチングサービスの公式Instagram",
 };
