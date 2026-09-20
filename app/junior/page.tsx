@@ -37,8 +37,8 @@ export default function JuniorPage() {
       </section>
 
       <ConsultForm
-        title="資料請求、または親子Zoom。"
-        lede="LINEでの軽微な相談も、送信後にご案内します。まずはこのフォームから。"
+        title="質問・相談"
+        lede="まずは個別相談から可能です。お気軽にご相談ください。"
         context="Junior"
       />
     </main>

@@ -50,8 +50,8 @@ export default function ProPage() {
       </section>
 
       <ConsultForm
-        title="経歴から、挑戦可能な国を診断する。"
-        lede="個別適性チェックと Zoom。無資格の紹介はしません。"
+        title="質問・相談"
+        lede="まずは個別相談から可能です。お気軽にご相談ください。"
         context="Pro"
       />
     </main>

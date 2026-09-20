@@ -42,7 +42,9 @@ export function ConsultForm({ id = "consult", title, lede, context }: Props) {
           <p className="mt-4 max-w-xl leading-relaxed text-mute">{lede}</p>
         </div>
         {status === "done" ? (
-          <p className="panel p-8 text-gold">送信しました。非公開でご連絡します。</p>
+          <p className="panel p-8 text-gold">
+            送信が完了致しました。確認次第、弊社スタッフより連絡差し上げます。
+          </p>
         ) : (
           <form className="grid gap-4" onSubmit={onSubmit}>
             <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
