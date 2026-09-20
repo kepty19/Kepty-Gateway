@@ -50,20 +50,20 @@ function IconMeeting() {
 const PILLARS = [
   {
     n: "01",
-    t: "情報を入手する",
-    d: "各国のリーグ時期、移籍期間、外国人枠、ビザを、毎月更新するデータベースで公開しています。",
+    t: "現地情報を入手できる",
+    d: "各国のリーグ時期、移籍期間、外国人枠、ビザ、などの情報を、毎月更新したデータとして公開しています。",
     icon: IconDatabase,
   },
   {
     n: "02",
-    t: "第三者に相談する",
-    d: "利害関係の外側に立つ企業として、中立の立場から個別にご相談を受けます。",
+    t: "第三者に相談できる",
+    d: "利害関係の外側に立つ企業として、中立の立場から弊社スタッフが個別にご相談を受けます。",
     icon: IconConsult,
   },
   {
     n: "03",
-    t: "当事者に話を聞く",
-    d: "挑戦を支える企業、代理人、クラブとの面談機会をご案内します。",
+    t: "当事者に話を聞ける",
+    d: "挑戦を支える企業、代理人、クラブとのオンライン面談の機会をご案内します。",
     icon: IconMeeting,
   },
 ];
@@ -74,7 +74,7 @@ export function OriginValue() {
       <div className="mx-auto max-w-page">
         <p className="kicker mb-4">Why we exist</p>
         <h2 className="max-w-3xl font-mincho text-3xl leading-snug md:text-4xl">
-          海外挑戦に、正しい情報と準備を。
+          海外挑戦に、正しい情報と準備を
         </h2>
         <div className="mt-10 max-w-3xl space-y-5 text-sm leading-[2] text-mute md:text-base">
           <p className="break-keep">
@@ -88,7 +88,7 @@ export function OriginValue() {
         <div className="gold-line my-16" />
 
         <p className="kicker mb-4">What we provide</p>
-        <h3 className="max-w-3xl font-mincho text-2xl leading-snug md:text-3xl">我々の特徴。</h3>
+        <h3 className="max-w-3xl font-mincho text-2xl leading-snug md:text-3xl">我々の特徴</h3>
         <p className="mt-4 max-w-2xl text-sm text-mute">
           「情報の透明性」と「挑戦の安心性」の2つを、次の3つの仕組みで実現します。
         </p>

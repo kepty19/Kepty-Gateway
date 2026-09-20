@@ -34,7 +34,7 @@ export default function HomePage() {
       <section className="px-5 py-24 md:px-10">
         <div className="mx-auto max-w-page">
           <p className="kicker mb-4">Choose your gate</p>
-          <h2 className="mb-12 font-mincho text-3xl md:text-4xl">二つの扉。</h2>
+          <h2 className="mb-12 font-mincho text-3xl md:text-4xl">二つの扉</h2>
           <div className="grid gap-4 md:grid-cols-2">
             <Link
               href="/pro/"
@@ -82,7 +82,7 @@ export default function HomePage() {
       </section>
 
       <ConsultForm
-        title="質問・相談。"
+        title="質問・相談"
         lede="海外挑戦について、お気軽にご相談ください。プロ・大人世代、ユース・アカデミー世代、共に、まずは非公開の個別相談から可能です。"
         context="Gateway"
       />

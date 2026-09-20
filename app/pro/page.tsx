@@ -5,7 +5,7 @@ import { AGENT_DESKS } from "@/data/agents";
 
 export const metadata: Metadata = {
   title: "プロ・大人世代",
-  description: "海外に挑む選手に有益となる情報。リーグ構造、移籍期間、現地パートナー。",
+  description: "海外移籍に関連する企業、代理人、クラブの情報。",
 };
 
 export default function ProPage() {
@@ -13,20 +13,18 @@ export default function ProPage() {
     <main className="pt-24">
       <section className="px-5 py-20 md:px-10">
         <div className="mx-auto max-w-page">
-          <p className="kicker mb-4">Adult</p>
+          <p className="kicker mb-4">Professional & Academy</p>
           <h1 className="max-w-3xl font-mincho text-4xl leading-tight md:text-5xl">
-            世界でプロになる。そのための『解』がここにある。
+            海外移籍は、今ここから。
           </h1>
           <p className="mt-6 max-w-2xl text-mute">
-            観光でも、噂でもない。リーグの立ち位置、窓が開く日、外国人枠、そして紹介できるライセンス仲介者。
+            海外移籍に関連する企業、代理人、クラブの情報を掲載しています。
           </p>
         </div>
       </section>
 
       <section className="px-5 pb-20 md:px-10">
         <div className="mx-auto max-w-page">
-          <p className="kicker mb-3">Database</p>
-          <h2 className="mb-10 font-mincho text-3xl">Global League Database</h2>
           <LeagueExplorer />
         </div>
       </section>

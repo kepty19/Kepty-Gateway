@@ -4,8 +4,7 @@ import { ConsultForm } from "@/components/ConsultForm";
 
 export const metadata: Metadata = {
   title: "ユース・アカデミー世代",
-  description:
-    "短期のサッカーイベントから長期のサッカー留学まで。海外に挑む若者に有益となる情報。",
+  description: "海外留学・イベントに関連する企業、クラブの情報。",
 };
 
 export default function JuniorPage() {
@@ -21,18 +20,16 @@ export default function JuniorPage() {
         <div className="relative mx-auto max-w-page">
           <p className="kicker mb-4">Youth & Academy</p>
           <h1 className="max-w-3xl font-mincho text-4xl leading-tight md:text-5xl">
-            10代で世界の本物を体験する。人生を変える数日間。
+            若いうちから、世界を体験する。
           </h1>
           <p className="mt-6 max-w-2xl text-mute">
-            旅行商品の一覧ではありません。Keptyが提携する現地のクラブ、企業、代理人のみを掲載しています。
+            海外留学・イベントに関連する企業、クラブの情報を掲載しています。
           </p>
         </div>
       </section>
 
       <section className="px-5 py-16 md:px-10">
         <div className="mx-auto max-w-page">
-          <p className="kicker mb-3">Partners</p>
-          <h2 className="mb-10 font-mincho text-3xl">提携先キュレーション</h2>
           <JuniorPartners />
         </div>
       </section>
