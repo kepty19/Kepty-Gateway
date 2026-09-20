@@ -73,7 +73,7 @@ export default function CompanyPage() {
               </a>
             </Fact>
             <Fact label="Email">
-              <p className="font-latin tracking-[0.02em] text-ivory">{SITE.email}</p>
+              <p>{SITE.email}</p>
             </Fact>
           </dl>
         </div>
