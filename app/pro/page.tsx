@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function ProPage() {
   return (
-    <main className="pt-36">
+    <main className="pt-24">
       <section className="px-5 py-20 md:px-10">
         <div className="mx-auto max-w-page">
           <p className="kicker mb-4">Adult</p>

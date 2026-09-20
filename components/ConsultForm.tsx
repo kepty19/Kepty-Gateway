@@ -34,7 +34,7 @@ export function ConsultForm({ id = "consult", title, lede, context }: Props) {
   };
 
   return (
-    <section id={id} className="scroll-mt-36 border-t border-gold/20 px-5 py-20 md:px-10">
+    <section id={id} className="scroll-mt-28 border-t border-gold/20 px-5 py-20 md:px-10">
       <div className="mx-auto grid max-w-page gap-12 md:grid-cols-2">
         <div>
           <p className="kicker mb-4">Private consultation</p>

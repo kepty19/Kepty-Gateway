@@ -1,12 +1,17 @@
 export const FOUNDER = {
   company: "Kepty Co., Ltd.",
-  roleEn: "Founder & CEO",
+  roleEn: "Founder & CEO, Kepty Co., Ltd.",
   nameEn: "Tomohiro Kajiyama",
-  nameJa: "梶山 智弘",
-  photo: "/assets/ceo-tomohiro-kajiyama.png",
+  nameJa: "梶山 知裕",
   instagram: "https://www.instagram.com/kepty.19/",
+  lede: "Your child is coached by the founder — not a rotating bench. A former professional, with the record to match.",
   paragraphs: [
-    "Cemano Kobe Youth U-18、関西大学を経て、オーストラリア NSW State League 1 で2シーズンプレー。2017年、同リーグで日本人として初めて得点王（Golden Boot）を受賞しました。",
-    "現役引退後、株式会社リクルートホールディングスにて、スタディサプリおよび Quipper の戦略に従事。その後、Kepty Co., Ltd. を創業しました。",
+    "After センアーノ神戸ユースU-18 and Kansai University, he played two seasons as a professional in Australia’s NSW State League 1. In 2017 he became the first Japanese player to win the league’s Golden Boot award.",
+    "After retiring, he joined Recruit Holdings, on strategy for Study Sapuri and Quipper. He then founded Kepty Co., Ltd., and now coaches young players in Tokyo in English — privately, and over time.",
   ],
+  otherKicker: "A separate Kepty service",
+  otherTitle: "English coaching for professional footballers",
+  otherBody:
+    "Through Kepty Co., Ltd. he also runs English coaching for current professional footballers — a separate service, not Football Private Lesson.",
+  instagramLabel: "English coaching on Instagram · @kepty.19",
 };

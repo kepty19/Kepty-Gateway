@@ -24,8 +24,8 @@ export function Footer() {
           <Link href="/#consult" className="hover:text-gold">
             コンシェルジュ相談
           </Link>
-          <Link href="/company/" className="font-latin text-[0.68rem] uppercase tracking-[0.16em] hover:text-gold">
-            Company
+          <Link href="/company/" className="hover:text-gold">
+            会社情報
           </Link>
           <Link href="/privacy/" className="font-latin text-[0.68rem] uppercase tracking-[0.16em] hover:text-gold">
             Privacy

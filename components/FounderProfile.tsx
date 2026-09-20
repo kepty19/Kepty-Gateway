@@ -2,34 +2,43 @@ import { FOUNDER } from "@/data/founder";
 
 export function FounderProfile() {
   return (
-    <div className="mx-auto grid max-w-page gap-8 md:grid-cols-[180px_1fr] md:items-start">
-      <img
-        src={FOUNDER.photo}
-        alt={`${FOUNDER.nameEn}, ${FOUNDER.roleEn} of ${FOUNDER.company}`}
-        className="mx-auto w-40 object-contain md:mx-0 md:w-full"
-      />
-      <div>
-        <p className="kicker">{`${FOUNDER.roleEn}, ${FOUNDER.company}`}</p>
-        <h2 className="mt-2 font-display text-3xl italic leading-tight text-ivory md:text-4xl">
+    <article className="coach-single overflow-hidden">
+      <div className="min-w-0">
+        <p className="kicker mb-4">{FOUNDER.roleEn}</p>
+        <h2 className="font-display text-[clamp(2rem,6vw,3.4rem)] italic leading-tight text-ivory">
           {FOUNDER.nameEn}
         </h2>
-        <p className="mt-1 text-mute">{FOUNDER.nameJa}</p>
-        <div className="mt-6 max-w-2xl space-y-4 text-sm leading-[1.95] text-mute md:text-base">
+        <p className="mt-2 font-mincho text-lg text-mute">{FOUNDER.nameJa}</p>
+        <div className="mt-8 space-y-4 text-[0.95rem] leading-[1.85] text-[#d4c7b6] md:text-base">
           {FOUNDER.paragraphs.map((paragraph) => (
-            <p key={paragraph} className="break-keep">
+            <p key={paragraph} className="break-words">
               {paragraph}
             </p>
           ))}
         </div>
-        <a
-          href={FOUNDER.instagram}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-6 inline-block font-latin text-[0.65rem] uppercase tracking-[0.18em] text-gold hover:text-gold-bright"
-        >
-          Instagram
-        </a>
+        <aside className="mt-8 border border-gold/25 border-l-2 border-l-gold bg-ink/55 p-4 shadow-[inset_0_1px_0_rgba(208,164,106,0.12)] sm:p-5">
+          <p className="font-latin text-[0.62rem] uppercase tracking-[0.22em] text-gold">
+            {FOUNDER.otherKicker}
+          </p>
+          <h3 className="mt-2 font-display text-[1.15rem] font-normal text-ivory">
+            {FOUNDER.otherTitle}
+          </h3>
+          <p className="mt-2 text-[0.92rem] leading-relaxed text-[#d4c7b6]">{FOUNDER.otherBody}</p>
+          <a
+            href={FOUNDER.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-flex max-w-full items-center gap-2 break-words border-b border-gold/30 pb-0.5 font-latin text-[0.78rem] tracking-wide text-gold hover:border-gold hover:text-gold-bright"
+          >
+            <svg viewBox="0 0 24 24" className="h-4 w-4 shrink-0" fill="none" aria-hidden>
+              <rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" strokeWidth="1.4" />
+              <circle cx="12" cy="12" r="3.6" stroke="currentColor" strokeWidth="1.4" />
+              <circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" />
+            </svg>
+            {FOUNDER.instagramLabel}
+          </a>
+        </aside>
       </div>
-    </div>
+    </article>
   );
 }
