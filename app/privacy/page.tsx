@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { SITE } from "@/lib/site";
 
-export const metadata: Metadata = { title: "Privacy" };
+export const metadata: Metadata = { title: "プライバシー" };
 
 export default function PrivacyPage() {
   return (

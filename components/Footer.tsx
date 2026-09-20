@@ -8,7 +8,7 @@ export function Footer() {
         <div>
           <p className="kicker mb-3">Kepty Global Gateway</p>
           <p className="max-w-md text-sm leading-relaxed text-mute">
-            世界へ挑む、すべてのフットボーラーへ。A concierge of Kepty Co., Ltd.
+            世界へ挑む、すべてのフットボーラーへ。
           </p>
         </div>
         <div className="flex flex-wrap gap-x-8 gap-y-2 font-mincho text-[0.82rem] tracking-[0.06em] text-mute">
@@ -27,8 +27,8 @@ export function Footer() {
           <Link href="/company/" className="hover:text-gold">
             会社情報
           </Link>
-          <Link href="/privacy/" className="font-latin text-[0.68rem] uppercase tracking-[0.16em] hover:text-gold">
-            Privacy
+          <Link href="/privacy/" className="hover:text-gold">
+            プライバシー
           </Link>
           <a href={`mailto:${SITE.email}`} className="font-latin text-[0.68rem] tracking-[0.08em] hover:text-gold">
             {SITE.email}
