@@ -3,14 +3,15 @@
 import { useMemo, useState } from "react";
 import { Flag } from "@/components/Flag";
 import { CONTINENTS } from "@/data/continents";
-import { LEAGUES } from "@/data/leagues";
+import { GENDERS, LEAGUES, type GenderId } from "@/data/leagues";
 
 export function LeagueExplorer() {
   const [id, setId] = useState(LEAGUES[0].id);
-  const [categoryId, setCategoryId] = useState(LEAGUES[0].categories[0].id);
+  const [gender, setGender] = useState<GenderId>("men");
+  const [categoryId, setCategoryId] = useState(LEAGUES[0].divisions.men[0].id);
   const country = LEAGUES.find((item) => item.id === id) ?? LEAGUES[0];
-  const category =
-    country.categories.find((item) => item.id === categoryId) ?? country.categories[0];
+  const categories = country.divisions[gender];
+  const category = categories.find((item) => item.id === categoryId) ?? categories[0];
 
   const grouped = useMemo(
     () =>
@@ -23,8 +24,14 @@ export function LeagueExplorer() {
 
   const selectCountry = (nextId: string) => {
     const next = LEAGUES.find((item) => item.id === nextId) ?? LEAGUES[0];
+    const nextCategories = next.divisions[gender];
     setId(next.id);
-    setCategoryId(next.categories[0].id);
+    setCategoryId(nextCategories[0].id);
+  };
+
+  const selectGender = (next: GenderId) => {
+    setGender(next);
+    setCategoryId(country.divisions[next][0].id);
   };
 
   return (
@@ -73,7 +80,26 @@ export function LeagueExplorer() {
 
         <p className="mb-3 font-mincho text-[0.8rem] tracking-[0.12em] text-gold">カテゴリー</p>
         <div className="flex min-w-0 flex-wrap gap-2">
-          {country.categories.map((item) => {
+          {GENDERS.map((item) => {
+            const active = item.id === gender;
+            return (
+              <button
+                key={item.id}
+                type="button"
+                onClick={() => selectGender(item.id)}
+                className={`border px-3 py-2 font-mincho text-[0.82rem] tracking-[0.04em] transition ${
+                  active
+                    ? "border-gold bg-gold/10 text-gold"
+                    : "border-gold/20 text-mute hover:border-gold/60"
+                }`}
+              >
+                {item.label}
+              </button>
+            );
+          })}
+        </div>
+        <div className="mt-3 flex min-w-0 flex-wrap gap-2">
+          {categories.map((item) => {
             const active = item.id === category.id;
             return (
               <button
