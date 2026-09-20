@@ -4,6 +4,10 @@ on:
   push:
     branches: [main]
 
+concurrency:
+  group: deploy-main
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
@@ -12,6 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -20,10 +26,30 @@ jobs:
       - run: npm run build
         env:
           CI: true
-      - name: Prepare Pages
+      - name: Prepare Pages files
         run: |
           cp CNAME out/CNAME
           touch out/.nojekyll
+      - name: Publish static site to main
+        run: |
+          set -euo pipefail
+          rsync -a out/ ./
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- \
+            .nojekyll CNAME \
+            index.html index.txt \
+            404.html 404 \
+            sitemap.xml robots.txt favicon.ico \
+            _next assets flags \
+            pro junior company privacy
+          if git diff --cached --quiet; then
+            echo "Published files unchanged"
+            exit 0
+          fi
+          git commit -m "chore: publish static site [skip ci]"
+          git pull --rebase origin main
+          git push origin HEAD:main
       - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
