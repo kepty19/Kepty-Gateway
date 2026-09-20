@@ -2,7 +2,7 @@ import type { ContinentId } from "@/data/continents";
 
 export const JAPANESE_NOTE = {
   likely: "公開情報から推測。",
-  unknown: "公開情報からは推測可能。",
+  unknown: "公開情報から推測できません。",
 } as const;
 
 export type GenderId = "men" | "women";
