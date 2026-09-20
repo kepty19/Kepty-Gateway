@@ -43,7 +43,7 @@ export default function HomePage() {
               <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold to-transparent opacity-0 transition group-hover:opacity-100" />
               <h3 className="font-mincho text-3xl leading-snug md:text-[2.1rem]">プロ・大人世代</h3>
               <p className="mt-4 text-sm leading-relaxed text-mute">
-                海外に挑む選手に有益となる情報がここに。
+                プロ契約からアマチュア契約まで。海外に挑む選手に有益となる情報がここに。
               </p>
               <p className="mt-8 font-mincho text-[0.85rem] tracking-[0.08em] text-gold">
                 プロ・大人世代のページへ →

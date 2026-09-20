@@ -64,6 +64,7 @@ const PILLARS = [
     n: "03",
     t: "当事者に話を聞ける",
     d: "挑戦を支える企業、代理人、クラブとのオンライン面談の機会をご案内します。",
+    note: "※一部、面談をご案内できない企業様がございます。",
     icon: IconMeeting,
   },
 ];
@@ -110,6 +111,11 @@ export function OriginValue() {
                 </div>
                 <h4 className="mt-8 font-mincho text-2xl">{item.t}</h4>
                 <p className="mt-3 text-sm leading-relaxed text-mute">{item.d}</p>
+                {"note" in item && item.note ? (
+                  <p className="mt-3 break-keep text-xs leading-relaxed text-mute/75">
+                    {item.note}
+                  </p>
+                ) : null}
               </li>
             );
           })}
