@@ -11,7 +11,7 @@ export function Footer() {
             世界へ挑む、すべてのフットボーラーへ。A concierge of Kepty Co., Ltd.
           </p>
         </div>
-        <div className="flex flex-wrap gap-x-8 gap-y-2 font-sans text-[0.78rem] tracking-[0.04em] text-mute">
+        <div className="flex flex-wrap gap-x-8 gap-y-2 font-mincho text-[0.82rem] tracking-[0.06em] text-mute">
           <Link href="/" className="hover:text-gold">
             ホーム
           </Link>
@@ -24,13 +24,13 @@ export function Footer() {
           <Link href="/#consult" className="hover:text-gold">
             コンシェルジュ相談
           </Link>
-          <Link href="/company/" className="hover:text-gold">
+          <Link href="/company/" className="font-latin text-[0.68rem] uppercase tracking-[0.16em] hover:text-gold">
             Company
           </Link>
-          <Link href="/privacy/" className="hover:text-gold">
+          <Link href="/privacy/" className="font-latin text-[0.68rem] uppercase tracking-[0.16em] hover:text-gold">
             Privacy
           </Link>
-          <a href={`mailto:${SITE.email}`} className="hover:text-gold">
+          <a href={`mailto:${SITE.email}`} className="font-latin text-[0.68rem] tracking-[0.08em] hover:text-gold">
             {SITE.email}
           </a>
         </div>

@@ -20,7 +20,7 @@ const config: Config = {
       fontFamily: {
         display: ['"Cormorant Garamond"', "Times New Roman", "serif"],
         mincho: ['"Shippori Mincho"', '"Noto Serif JP"', "serif"],
-        sans: ['"Noto Sans JP"', "Montserrat", "Helvetica Neue", "sans-serif"],
+        sans: ['"Shippori Mincho"', '"Noto Serif JP"', "serif"],
         latin: ["Montserrat", "Helvetica Neue", "sans-serif"],
       },
       letterSpacing: {

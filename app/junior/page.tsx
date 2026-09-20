@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function JuniorPage() {
   return (
-    <main className="pt-24">
+    <main className="pt-36">
       <section className="relative overflow-hidden px-5 py-20 md:px-10">
         <img
           src="/assets/coach-play-02.jpg"

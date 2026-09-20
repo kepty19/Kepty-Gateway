@@ -49,9 +49,11 @@ export function JuniorPartners() {
                 key={value}
                 type="button"
                 onClick={() => setSeason(value)}
-                className={`px-3 py-1.5 border font-latin text-[0.65rem] uppercase tracking-[0.16em] ${
-                  season === value ? "border-gold text-gold" : "border-gold/20 text-mute"
-                }`}
+                className={`border px-3 py-1.5 ${
+                  value === "all"
+                    ? "font-latin text-[0.65rem] uppercase tracking-[0.16em]"
+                    : "font-mincho text-[0.82rem] tracking-[0.08em]"
+                } ${season === value ? "border-gold text-gold" : "border-gold/20 text-mute"}`}
               >
                 {value === "all" ? "All" : SEASON_LABEL[value]}
               </button>
@@ -64,7 +66,7 @@ export function JuniorPartners() {
             <div key={group.id}>
               <p className="kicker mb-3">
                 {group.label}
-                <span className="ml-3 font-sans tracking-normal text-mute/80">{group.labelJa}</span>
+                <span className="ml-3 font-mincho tracking-normal text-mute/80">{group.labelJa}</span>
               </p>
               <div className="flex flex-wrap gap-2">
                 {group.countries.map((id) => {
@@ -79,7 +81,7 @@ export function JuniorPartners() {
                       }`}
                     >
                       <Flag code={COUNTRY_FLAG[id]} name={COUNTRY_LABEL[id]} />
-                      <span className="font-latin text-[0.65rem] uppercase tracking-[0.16em]">
+                      <span className="font-mincho text-[0.82rem] tracking-[0.06em]">
                         {COUNTRY_LABEL[id]}
                       </span>
                     </button>
@@ -108,7 +110,7 @@ export function JuniorPartners() {
             <section key={group.id}>
               <p className="kicker mb-5">
                 {group.label}
-                <span className="ml-3 font-sans tracking-normal text-mute/80">{group.labelJa}</span>
+                <span className="ml-3 font-mincho tracking-normal text-mute/80">{group.labelJa}</span>
               </p>
               <div className="grid gap-4 md:grid-cols-2">
                 {group.partners.map((item) => (
@@ -116,11 +118,15 @@ export function JuniorPartners() {
                     <div className="flex items-start justify-between gap-3">
                       <div className="flex items-center gap-2.5">
                         <Flag code={item.flag} name={item.name} />
-                        <p className="kicker">
-                          {COUNTRY_LABEL[item.country]} · {item.city}
+                        <p className="font-mincho text-[0.78rem] tracking-[0.06em] text-mute">
+                          {COUNTRY_LABEL[item.country]}
+                          <span className="font-latin text-[0.62rem] uppercase tracking-[0.14em] text-mute/80">
+                            {" "}
+                            · {item.city}
+                          </span>
                         </p>
                       </div>
-                      <p className="font-latin text-[0.58rem] uppercase tracking-[0.16em] text-gold">
+                      <p className="font-mincho text-[0.72rem] tracking-[0.08em] text-gold">
                         {item.kind}
                       </p>
                     </div>

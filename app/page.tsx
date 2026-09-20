@@ -45,7 +45,7 @@ export default function HomePage() {
               <p className="mt-4 text-sm leading-relaxed text-mute">
                 海外に挑む選手に有益となる情報がここに。
               </p>
-              <p className="mt-8 font-sans text-[0.8rem] tracking-[0.04em] text-gold">
+              <p className="mt-8 font-mincho text-[0.85rem] tracking-[0.08em] text-gold">
                 プロ・大人世代のページへ →
               </p>
             </Link>
@@ -60,7 +60,7 @@ export default function HomePage() {
               <p className="mt-4 text-sm leading-relaxed text-mute">
                 短期のサッカーイベントから長期のサッカー留学まで。海外に挑む若者に有益となる情報がここに。
               </p>
-              <p className="mt-8 font-sans text-[0.8rem] tracking-[0.04em] text-gold">
+              <p className="mt-8 font-mincho text-[0.85rem] tracking-[0.08em] text-gold">
                 ユース・アカデミー世代のページへ →
               </p>
             </Link>

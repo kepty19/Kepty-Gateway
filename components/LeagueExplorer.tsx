@@ -25,7 +25,7 @@ export function LeagueExplorer() {
           <div key={group.id}>
             <p className="kicker mb-3">
               {group.label}
-              <span className="ml-3 font-sans tracking-normal text-mute/80">{group.labelJa}</span>
+              <span className="ml-3 font-mincho tracking-normal text-mute/80">{group.labelJa}</span>
             </p>
             <div className="flex flex-wrap gap-2">
               {group.countries.map((item) => {
@@ -64,16 +64,16 @@ export function LeagueExplorer() {
 
         <div className="grid gap-4 md:grid-cols-2">
           <div className="panel p-5">
-            <p className="kicker mb-2">リーグの時期</p>
+            <p className="mb-2 font-mincho text-[0.8rem] tracking-[0.12em] text-gold">リーグの時期</p>
             <p>{league.leaguePeriod}</p>
           </div>
           <div className="panel p-5">
-            <p className="kicker mb-2">移籍期間</p>
+            <p className="mb-2 font-mincho text-[0.8rem] tracking-[0.12em] text-gold">移籍期間</p>
             <p className="text-sm">夏 {league.summerWindow}</p>
             <p className="mt-1 text-sm">冬 {league.winterWindow}</p>
           </div>
           <div className="panel p-5">
-            <p className="kicker mb-2">外国人枠</p>
+            <p className="mb-2 font-mincho text-[0.8rem] tracking-[0.12em] text-gold">外国人枠</p>
             <p>{league.foreignCap}</p>
             {league.asianQuota ? (
               <p className="mt-3 border-t border-gold/20 pt-3 text-sm text-gold">{league.asianQuota}</p>
@@ -82,14 +82,14 @@ export function LeagueExplorer() {
             )}
           </div>
           <div className="panel p-5">
-            <p className="kicker mb-2">ビザ</p>
+            <p className="mb-2 font-mincho text-[0.8rem] tracking-[0.12em] text-gold">ビザ</p>
             <p className="text-sm leading-relaxed text-mute">{league.visa}</p>
           </div>
         </div>
 
         <div className="panel mt-4 flex flex-col gap-3 p-6 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="kicker mb-2">プレーしている日本人</p>
+            <p className="mb-2 font-mincho text-[0.8rem] tracking-[0.12em] text-gold">プレーしている日本人</p>
             <p className="font-mincho text-4xl text-gold">{league.japanesePlayers}</p>
           </div>
           <p className="max-w-md text-sm text-mute">{league.japaneseNote}</p>
