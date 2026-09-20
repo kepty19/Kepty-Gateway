@@ -11,12 +11,18 @@ export function Footer() {
             世界へ挑む、すべてのフットボーラーへ。A concierge of Kepty Co., Ltd.
           </p>
         </div>
-        <div className="flex flex-wrap gap-x-8 gap-y-2 font-latin text-[0.68rem] uppercase tracking-[0.18em] text-mute">
+        <div className="flex flex-wrap gap-x-8 gap-y-2 font-sans text-[0.78rem] tracking-[0.04em] text-mute">
+          <Link href="/" className="hover:text-gold">
+            ホーム
+          </Link>
           <Link href="/pro/" className="hover:text-gold">
-            Adult
+            プロ・大人
           </Link>
           <Link href="/junior/" className="hover:text-gold">
-            Junior
+            ユース・アカデミー
+          </Link>
+          <Link href="/#consult" className="hover:text-gold">
+            コンシェルジュ相談
           </Link>
           <Link href="/company/" className="hover:text-gold">
             Company

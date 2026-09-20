@@ -4,7 +4,8 @@ import { ConsultForm } from "@/components/ConsultForm";
 
 export const metadata: Metadata = {
   title: "ユース・アカデミー世代",
-  description: "現地の提携クラブ、企業、代理人を掲載しています。",
+  description:
+    "短期のサッカーイベントから長期のサッカー留学まで。海外に挑む若者に有益となる情報。",
 };
 
 export default function JuniorPage() {

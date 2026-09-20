@@ -50,7 +50,7 @@ function IconMeeting() {
 const PILLARS = [
   {
     n: "01",
-    t: "情報を得る",
+    t: "情報を入手する",
     d: "各国のリーグ時期、移籍期間、外国人枠、ビザを、毎月更新するデータベースで公開しています。",
     icon: IconDatabase,
   },
@@ -74,25 +74,23 @@ export function OriginValue() {
       <div className="mx-auto max-w-page">
         <p className="kicker mb-4">Why we exist</p>
         <h2 className="max-w-3xl font-mincho text-3xl leading-snug md:text-4xl">
-          海外挑戦に、正しい情報を。
+          海外挑戦に、正しい情報と準備を。
         </h2>
         <div className="mt-10 max-w-3xl space-y-5 text-sm leading-[2] text-mute md:text-base">
-          <p>
-            高校・大学から海外へ挑戦する選手、プロ契約を経て移籍する選手は、年々増えています。しかし海外では、リーグの仕組みや契約条件の情報が日本国内ほど整っていません。選手は自分の責任で決断しがちであり、その結果、不当な条件や費用での渡航、正確な情報がないまま機会を逃すケースが増えていると聞きます。
+          <p className="break-keep">
+            若い小学生年代から海外に踏み出すご家庭が増え、高校・大学から海外へ挑戦する選手、プロ契約を経て移籍する選手の数は、年々増加しています。しかし海外では、リーグの仕組みや契約条件の情報が日本国内ほど整っていません。そのため、選手は限られた情報の中で決断することとなり、その結果、適切ではない条件や費用での渡航、正確な情報がないまま機会を逃すケースなどが増えていると聞きます。
           </p>
           <p className="text-ivory">
-            Kepty Global Gatewayは、情報の透明性をつくり、選手に機会を届け、サッカー人生とその後をより良いものにするために発足しました。
+            Kepty Global Gatewayは、その現実を改善するために発足しました。情報の透明性をつくり、選手に機会を届け、サッカー人生とその後をより良いものにできるよう支援いたします。
           </p>
         </div>
 
         <div className="gold-line my-16" />
 
         <p className="kicker mb-4">What we provide</p>
-        <h3 className="max-w-3xl font-mincho text-2xl leading-snug md:text-3xl">
-          情報の透明性と、挑戦の安心性。
-        </h3>
+        <h3 className="max-w-3xl font-mincho text-2xl leading-snug md:text-3xl">我々の特徴。</h3>
         <p className="mt-4 max-w-2xl text-sm text-mute">
-          この二つを、次の三つの仕組みで実現します。
+          「情報の透明性」と「挑戦の安心性」の2つを、次の3つの仕組みで実現します。
         </p>
 
         <ol className="mt-12 grid gap-4 md:grid-cols-3">

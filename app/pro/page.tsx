@@ -5,7 +5,7 @@ import { AGENT_DESKS } from "@/data/agents";
 
 export const metadata: Metadata = {
   title: "プロ・大人世代",
-  description: "世界でプロになるためのリーグ構造、移籍ウィンドウ、現地代理人デスク。",
+  description: "海外に挑む選手に有益となる情報。リーグ構造、移籍期間、現地パートナー。",
 };
 
 export default function ProPage() {

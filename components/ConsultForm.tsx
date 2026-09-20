@@ -34,12 +34,12 @@ export function ConsultForm({ id = "consult", title, lede, context }: Props) {
   };
 
   return (
-    <section id={id} className="border-t border-gold/20 px-5 py-20 md:px-10">
+    <section id={id} className="scroll-mt-28 border-t border-gold/20 px-5 py-20 md:px-10">
       <div className="mx-auto grid max-w-page gap-12 md:grid-cols-2">
         <div>
           <p className="kicker mb-4">Private consultation</p>
           <h2 className="font-mincho text-3xl leading-snug md:text-4xl">{title}</h2>
-          <p className="mt-4 max-w-md text-mute">{lede}</p>
+          <p className="mt-4 max-w-xl break-keep leading-relaxed text-mute">{lede}</p>
         </div>
         {status === "done" ? (
           <p className="panel p-8 text-gold">送信しました。非公開でご連絡します。</p>

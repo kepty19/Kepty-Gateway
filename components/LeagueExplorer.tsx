@@ -105,7 +105,7 @@ export function LeagueExplorer() {
       </article>
 
       <p className="mt-8 text-xs tracking-wide text-mute/70">
-        人数は公開ロスターの概数です。移籍規則・外国人枠・ビザは年度で改定されます。最終判断は個別診断で確認します。
+        人数は公開ロスターの概数です。移籍規則・外国人枠・ビザは年度で改定されます。最終判断は個別相談にてご確認ください。
       </p>
     </div>
   );

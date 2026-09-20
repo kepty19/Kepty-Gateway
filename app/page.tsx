@@ -15,14 +15,18 @@ export default function HomePage() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ink via-ink/70 to-ink" />
         <div className="relative mx-auto flex min-h-screen max-w-page flex-col justify-end px-5 pb-24 pt-32 md:px-10">
-          <p className="kicker mb-6">Kepty Global Gateway</p>
+          <p className="mb-7 font-latin text-lg font-medium uppercase tracking-[0.28em] text-gold md:text-2xl md:tracking-[0.34em]">
+            Kepty Global Gateway
+          </p>
           <h1 className="font-mincho text-[clamp(1.7rem,4.6vw,3.75rem)] leading-[1.35]">
             世界へ挑む、
             <br />
             <span className="whitespace-nowrap">すべてのフットボーラーへ。</span>
           </h1>
-          <p className="mt-6 max-w-xl text-mute">
-            本気で海外を目指す選手のための、リアルな情報データベースと現地への確実なアクセス。
+          <p className="mt-6 max-w-2xl text-[1.05rem] leading-relaxed text-mute md:text-lg">
+            海外でプレーするために必要な情報と、
+            <br className="hidden sm:block" />
+            現地につながる相談窓口を、一箇所に。
           </p>
         </div>
       </section>
@@ -39,10 +43,10 @@ export default function HomePage() {
               <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold to-transparent opacity-0 transition group-hover:opacity-100" />
               <h3 className="font-mincho text-3xl leading-snug md:text-[2.1rem]">プロ・大人世代</h3>
               <p className="mt-4 text-sm leading-relaxed text-mute">
-                世界のリーグ構造・移籍期間・現地代理人ネットワーク。プロとして世界に挑むための完全データベース。
+                海外に挑む選手に有益となる情報がここに。
               </p>
-              <p className="mt-8 font-latin text-[0.68rem] uppercase tracking-[0.22em] text-gold">
-                プロ・大人世代へ →
+              <p className="mt-8 font-sans text-[0.8rem] tracking-[0.04em] text-gold">
+                プロ・大人世代のページへ →
               </p>
             </Link>
             <Link
@@ -54,10 +58,10 @@ export default function HomePage() {
                 ユース・アカデミー世代
               </h3>
               <p className="mt-4 text-sm leading-relaxed text-mute">
-                現地の提携クラブ、企業、代理人を掲載しています。
+                短期のサッカーイベントから長期のサッカー留学まで。海外に挑む若者に有益となる情報がここに。
               </p>
-              <p className="mt-8 font-latin text-[0.68rem] uppercase tracking-[0.22em] text-gold">
-                ユース・アカデミー世代へ →
+              <p className="mt-8 font-sans text-[0.8rem] tracking-[0.04em] text-gold">
+                ユース・アカデミー世代のページへ →
               </p>
             </Link>
           </div>
@@ -69,16 +73,17 @@ export default function HomePage() {
       <section className="px-5 py-24 md:px-10">
         <div className="mx-auto max-w-page">
           <p className="kicker mb-4">Partners</p>
-          <h2 className="font-mincho text-3xl leading-snug md:text-4xl">
-            サッカーを通して挑戦する若者達と、共に歩むパートナーシップ企業様
-          </h2>
+          <h2 className="font-mincho text-3xl leading-snug md:text-5xl">パートナーシップ企業様</h2>
+          <p className="mt-4 max-w-2xl text-sm text-mute md:text-base">
+            サッカーを通して挑戦する若者達と、共に歩むパートナーシップ企業様です。
+          </p>
           <PartnerTiers />
         </div>
       </section>
 
       <ConsultForm
-        title="海外挑戦について、ご相談ください。"
-        lede="プロ・大人世代、ユース・アカデミー世代、いずれでも。まずは非公開の相談から。"
+        title="質問・相談。"
+        lede="海外挑戦について、お気軽にご相談ください。プロ・大人世代、ユース・アカデミー世代、共に、まずは非公開の個別相談から可能です。"
         context="Gateway"
       />
       <Faq />
