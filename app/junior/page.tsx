@@ -18,7 +18,7 @@ export default function JuniorPage() {
           className="absolute inset-0 h-full w-full object-cover opacity-20 grayscale"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ink via-ink/85 to-ink" />
-        <div className="relative mx-auto max-w-page">
+        <div className="relative mx-auto min-w-0 max-w-page">
           <p className="kicker mb-4">Youth & Academy</p>
           <h1 className="max-w-3xl font-mincho text-4xl leading-tight md:text-5xl">
             若いうちから、世界を体験する。
@@ -30,7 +30,7 @@ export default function JuniorPage() {
       </section>
 
       <section className="px-5 py-16 md:px-10">
-        <div className="mx-auto max-w-page">
+        <div className="mx-auto min-w-0 max-w-page">
           <JuniorPartners />
           <ListingDisclaimer />
         </div>

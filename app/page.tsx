@@ -15,13 +15,13 @@ export default function HomePage() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ink via-ink/70 to-ink" />
         <div className="relative mx-auto flex min-h-screen max-w-page flex-col justify-end px-5 pb-24 pt-32 md:px-10">
-          <p className="mb-7 font-latin text-lg font-medium uppercase tracking-[0.28em] text-gold md:text-2xl md:tracking-[0.34em]">
+          <p className="mb-7 max-w-full font-latin text-[0.78rem] font-medium uppercase tracking-[0.16em] text-gold sm:text-lg sm:tracking-[0.28em] md:text-2xl md:tracking-[0.34em]">
             Kepty Global Gateway
           </p>
           <h1 className="font-mincho text-[clamp(1.7rem,4.6vw,3.75rem)] leading-[1.35]">
             世界へ挑む、
             <br />
-            <span className="whitespace-nowrap">すべてのフットボーラーへ。</span>
+            すべてのフットボーラーへ。
           </h1>
           <p className="mt-6 max-w-2xl text-[1.05rem] leading-relaxed text-mute md:text-lg">
             海外でプレーするために必要な情報と、
@@ -34,7 +34,7 @@ export default function HomePage() {
       <OriginValue />
 
       <section className="px-5 py-24 md:px-10">
-        <div className="mx-auto max-w-page">
+        <div className="mx-auto min-w-0 max-w-page">
           <p className="kicker mb-4">Choose your gate</p>
           <h2 className="font-mincho text-3xl md:text-4xl">二つの扉</h2>
           <p className="mb-12 mt-4 max-w-2xl text-sm leading-relaxed text-mute md:text-base">
@@ -74,7 +74,7 @@ export default function HomePage() {
       </section>
 
       <section className="px-5 py-24 md:px-10">
-        <div className="mx-auto max-w-page">
+        <div className="mx-auto min-w-0 max-w-page">
           <p className="kicker mb-4">Partners</p>
           <h2 className="font-mincho text-3xl leading-snug md:text-4xl">パートナーシップ企業様</h2>
           <p className="mt-4 max-w-2xl text-sm text-mute md:text-base">

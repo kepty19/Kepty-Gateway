@@ -35,11 +35,11 @@ export function ConsultForm({ id = "consult", title, lede, context }: Props) {
 
   return (
     <section id={id} className="scroll-mt-28 border-t border-gold/20 px-5 py-20 md:px-10">
-      <div className="mx-auto grid max-w-page gap-12 md:grid-cols-2">
+      <div className="mx-auto grid min-w-0 max-w-page gap-12 md:grid-cols-2">
         <div>
           <p className="kicker mb-4">Private consultation</p>
-          <h2 className="font-mincho text-3xl leading-snug md:text-4xl">{title}</h2>
-          <p className="mt-4 max-w-xl break-keep leading-relaxed text-mute">{lede}</p>
+          <h2 className="break-words font-mincho text-3xl leading-snug md:text-4xl">{title}</h2>
+          <p className="mt-4 max-w-xl leading-relaxed text-mute">{lede}</p>
         </div>
         {status === "done" ? (
           <p className="panel p-8 text-gold">送信しました。非公開でご連絡します。</p>
@@ -51,7 +51,7 @@ export function ConsultForm({ id = "consult", title, lede, context }: Props) {
               <input
                 required
                 name="name"
-                className="border border-gold/30 bg-transparent px-3 py-2 text-ivory outline-none focus:border-gold"
+                className="w-full min-w-0 border border-gold/30 bg-transparent px-3 py-2 text-ivory outline-none focus:border-gold"
               />
             </label>
             <label className="grid gap-1 text-sm text-mute">
@@ -60,7 +60,7 @@ export function ConsultForm({ id = "consult", title, lede, context }: Props) {
                 required
                 type="email"
                 name="email"
-                className="border border-gold/30 bg-transparent px-3 py-2 text-ivory outline-none focus:border-gold"
+                className="w-full min-w-0 border border-gold/30 bg-transparent px-3 py-2 text-ivory outline-none focus:border-gold"
               />
             </label>
             <label className="grid gap-1 text-sm text-mute">
@@ -69,7 +69,7 @@ export function ConsultForm({ id = "consult", title, lede, context }: Props) {
                 required
                 name="message"
                 rows={5}
-                className="border border-gold/30 bg-transparent px-3 py-2 text-ivory outline-none focus:border-gold"
+                className="w-full min-w-0 border border-gold/30 bg-transparent px-3 py-2 text-ivory outline-none focus:border-gold"
               />
             </label>
             <button className="btn-gold" type="submit" disabled={status === "sending"}>

@@ -13,7 +13,7 @@ export default function ProPage() {
   return (
     <main className="pt-24">
       <section className="px-5 py-20 md:px-10">
-        <div className="mx-auto max-w-page">
+        <div className="mx-auto min-w-0 max-w-page">
           <p className="kicker mb-4">Professional & Academy</p>
           <h1 className="max-w-3xl font-mincho text-4xl leading-tight md:text-5xl">
             海外移籍は、今ここから。
@@ -25,13 +25,13 @@ export default function ProPage() {
       </section>
 
       <section className="px-5 pb-20 md:px-10">
-        <div className="mx-auto max-w-page">
+        <div className="mx-auto min-w-0 max-w-page">
           <LeagueExplorer />
         </div>
       </section>
 
       <section className="border-t border-gold/20 px-5 py-20 md:px-10">
-        <div className="mx-auto max-w-page">
+        <div className="mx-auto min-w-0 max-w-page">
           <p className="kicker mb-3">Directory</p>
           <h2 className="mb-10 font-mincho text-3xl">現地パートナーデスク</h2>
           <div className="grid gap-4 md:grid-cols-2">

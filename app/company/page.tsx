@@ -57,7 +57,7 @@ export default function CompanyPage() {
               <p className="text-xl md:text-2xl">{FOUNDER.nameJa}</p>
               <div className="mt-5 space-y-4 text-sm leading-[1.95] text-mute md:text-base">
                 {FOUNDER.paragraphs.map((paragraph) => (
-                  <p key={paragraph} className="break-keep">
+                  <p key={paragraph} className="leading-[1.95]">
                     {paragraph}
                   </p>
                 ))}

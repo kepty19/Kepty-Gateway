@@ -20,7 +20,7 @@ export function Footer() {
           </Link>
         </div>
       </div>
-      <p className="mx-auto mt-10 max-w-page font-latin text-[0.62rem] tracking-[0.14em] text-mute/70">
+      <p className="mx-auto mt-10 max-w-page break-words font-latin text-[0.62rem] tracking-[0.08em] text-mute/70 sm:tracking-[0.14em]">
         © {new Date().getFullYear()} {SITE.company} All rights reserved.
       </p>
     </footer>

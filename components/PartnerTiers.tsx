@@ -6,14 +6,14 @@ type Tier = "platinum" | "gold" | "silver";
 function Slot({ partner, tier }: { partner: Partner; tier: Tier }) {
   const box =
     tier === "platinum"
-      ? "h-40 w-[min(100%,36rem)] min-w-[18rem] border-gold"
+      ? "h-36 w-64 max-w-full sm:h-40 sm:w-80 lg:w-[36rem] border-gold"
       : tier === "gold"
-        ? "h-24 w-64 border-gold/45"
-        : "h-20 w-56 border-gold/25";
+        ? "h-24 w-52 max-w-full sm:w-64 border-gold/45"
+        : "h-20 w-44 max-w-full sm:w-56 border-gold/25";
 
   return (
     <div
-      className={`flex shrink-0 items-center justify-center border border-dashed bg-ink/40 px-6 ${box}`}
+      className={`flex max-w-full shrink-0 items-center justify-center border border-dashed bg-ink/40 px-4 sm:px-6 ${box}`}
     >
       {partner.logo ? (
         <img src={partner.logo} alt={partner.name} className="max-h-[58%] max-w-[72%] object-contain" />
@@ -59,14 +59,14 @@ function TierRow({
     <div>
       <p className="kicker mb-4">{label}</p>
       {marquee ? (
-        <div className="overflow-hidden">
-          <div className="partner-track flex w-max items-center gap-4">
+        <div className="max-w-full overflow-hidden">
+          <div className="partner-track flex w-max max-w-none items-center gap-4">
             <SlotGroup partners={partners} tier={tier} />
             <SlotGroup partners={partners} tier={tier} hidden />
           </div>
         </div>
       ) : (
-        <div className="flex w-full justify-center">
+        <div className="flex w-full max-w-full justify-center">
           <SlotGroup partners={partners} tier={tier} />
         </div>
       )}

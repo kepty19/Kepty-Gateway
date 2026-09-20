@@ -27,7 +27,7 @@ export function LeagueExplorer() {
               {group.label}
               <span className="ml-3 font-mincho tracking-normal text-mute/80">{group.labelJa}</span>
             </p>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex min-w-0 flex-wrap gap-2">
               {group.countries.map((item) => {
                 const active = item.id === id;
                 return (

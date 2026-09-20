@@ -16,9 +16,9 @@ export function Nav() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-gold/20 bg-ink/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-page items-center justify-between gap-4 px-5 py-4 md:px-10">
-        <Link href="/" className="shrink-0 font-latin text-[0.68rem] uppercase tracking-brand text-gold">
+        <Link href="/" className="min-w-0 shrink font-latin text-[0.68rem] uppercase tracking-[0.18em] text-gold sm:tracking-brand">
           Kepty
-          <span className="mt-0.5 block text-[0.58rem] tracking-[0.2em] text-mute">
+          <span className="mt-0.5 block text-[0.58rem] tracking-[0.14em] text-mute sm:tracking-[0.2em]">
             Global Gateway
           </span>
         </Link>

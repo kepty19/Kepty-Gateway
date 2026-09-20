@@ -72,13 +72,13 @@ const PILLARS = [
 export function OriginValue() {
   return (
     <section className="border-y border-gold/20 bg-navy/30 px-5 py-24 md:px-10">
-      <div className="mx-auto max-w-page">
+      <div className="mx-auto min-w-0 max-w-page">
         <p className="kicker mb-4">Why we exist</p>
         <h2 className="max-w-3xl font-mincho text-3xl leading-snug md:text-4xl">
           海外挑戦に、正しい情報と準備を
         </h2>
         <div className="mt-10 max-w-3xl space-y-5 text-sm leading-[2] text-mute md:text-base">
-          <p className="break-keep">
+          <p className="leading-[2] text-mute">
             若い小学生年代から海外に踏み出すご家庭が増え、高校・大学から海外へ挑戦する選手、プロ契約を経て移籍する選手の数は、年々増加しています。しかし海外では、リーグの仕組みや契約条件の情報が日本国内ほど整っていません。そのため、選手は限られた情報の中で決断することとなり、その結果、適切ではない条件や費用での渡航、正確な情報がないまま機会を逃すケースなどが増えていると聞きます。
           </p>
           <p className="text-ivory">
@@ -109,10 +109,10 @@ export function OriginValue() {
                   </span>
                   <p className="kicker">{item.n}</p>
                 </div>
-                <h4 className="mt-8 font-mincho text-2xl">{item.t}</h4>
+                <h4 className="mt-8 font-mincho text-xl leading-snug md:text-2xl">{item.t}</h4>
                 <p className="mt-3 text-sm leading-relaxed text-mute">{item.d}</p>
                 {"note" in item && item.note ? (
-                  <p className="mt-3 break-keep text-xs leading-relaxed text-mute/75">
+                  <p className="mt-3 text-xs leading-relaxed text-mute/75">
                     {item.note}
                   </p>
                 ) : null}
