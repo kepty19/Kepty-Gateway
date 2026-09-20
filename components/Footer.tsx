@@ -12,27 +12,12 @@ export function Footer() {
           </p>
         </div>
         <div className="flex flex-wrap gap-x-8 gap-y-2 font-mincho text-[0.82rem] tracking-[0.06em] text-mute">
-          <Link href="/" className="hover:text-gold">
-            ホーム
-          </Link>
-          <Link href="/pro/" className="hover:text-gold">
-            プロ・大人
-          </Link>
-          <Link href="/junior/" className="hover:text-gold">
-            ユース・アカデミー
-          </Link>
-          <Link href="/#consult" className="hover:text-gold">
-            コンシェルジュ相談
-          </Link>
           <Link href="/company/" className="hover:text-gold">
             会社情報
           </Link>
           <Link href="/privacy/" className="hover:text-gold">
             プライバシー
           </Link>
-          <a href={`mailto:${SITE.email}`} className="font-latin text-[0.68rem] tracking-[0.08em] hover:text-gold">
-            {SITE.email}
-          </a>
         </div>
       </div>
       <p className="mx-auto mt-10 max-w-page font-latin text-[0.62rem] tracking-[0.14em] text-mute/70">

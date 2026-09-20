@@ -36,14 +36,6 @@ body {
   background: linear-gradient(90deg, transparent, rgba(197, 160, 89, 0.55), transparent);
 }
 
-.coach-single {
-  border: 1px solid rgba(197, 160, 89, 0.28);
-  padding: clamp(1.2rem, 3vw, 2.2rem);
-  background:
-    radial-gradient(ellipse at 20% 0%, rgba(208, 164, 106, 0.16), transparent 46%),
-    #0c0b0a;
-}
-
 @layer components {
   .kicker {
     @apply font-latin text-[0.68rem] uppercase tracking-brand text-gold;
