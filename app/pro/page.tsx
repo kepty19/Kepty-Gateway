@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { LeagueExplorer } from "@/components/LeagueExplorer";
 import { ConsultForm } from "@/components/ConsultForm";
+import { ListingDisclaimer } from "@/components/ListingDisclaimer";
 import { AGENT_DESKS } from "@/data/agents";
 
 export const metadata: Metadata = {
@@ -44,6 +45,7 @@ export default function ProPage() {
               </article>
             ))}
           </div>
+          <ListingDisclaimer />
         </div>
       </section>
 
