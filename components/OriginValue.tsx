@@ -89,7 +89,7 @@ export function OriginValue() {
         <div className="gold-line my-16" />
 
         <p className="kicker mb-4">What we provide</p>
-        <h3 className="max-w-3xl font-mincho text-2xl leading-snug md:text-3xl">我々の特徴</h3>
+        <h2 className="max-w-3xl font-mincho text-3xl leading-snug md:text-4xl">我々の特徴</h2>
         <p className="mt-4 max-w-2xl text-sm text-mute">
           「情報の透明性」と「挑戦の安心性」の2つを、次の3つの仕組みで実現します。
         </p>

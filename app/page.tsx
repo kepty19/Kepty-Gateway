@@ -31,10 +31,15 @@ export default function HomePage() {
         </div>
       </section>
 
+      <OriginValue />
+
       <section className="px-5 py-24 md:px-10">
         <div className="mx-auto max-w-page">
           <p className="kicker mb-4">Choose your gate</p>
-          <h2 className="mb-12 font-mincho text-3xl md:text-4xl">二つの扉</h2>
+          <h2 className="font-mincho text-3xl md:text-4xl">二つの扉</h2>
+          <p className="mb-12 mt-4 max-w-2xl text-sm leading-relaxed text-mute md:text-base">
+            プロ・大人世代と、ユース・アカデミー世代。目的に合うページをお選びください。
+          </p>
           <div className="grid gap-4 md:grid-cols-2">
             <Link
               href="/pro/"
@@ -68,12 +73,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <OriginValue />
-
       <section className="px-5 py-24 md:px-10">
         <div className="mx-auto max-w-page">
           <p className="kicker mb-4">Partners</p>
-          <h2 className="font-mincho text-3xl leading-snug md:text-5xl">パートナーシップ企業様</h2>
+          <h2 className="font-mincho text-3xl leading-snug md:text-4xl">パートナーシップ企業様</h2>
           <p className="mt-4 max-w-2xl text-sm text-mute md:text-base">
             サッカーを通して挑戦する若者達と、共に歩むパートナーシップ企業様です。
           </p>
