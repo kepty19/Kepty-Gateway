@@ -32,8 +32,6 @@ export default function ProPage() {
 
       <section className="border-t border-gold/20 px-5 py-20 md:px-10">
         <div className="mx-auto min-w-0 max-w-page">
-          <p className="kicker mb-3">Directory</p>
-          <h2 className="mb-10 font-mincho text-3xl">現地パートナーデスク</h2>
           <div className="grid gap-4 md:grid-cols-2">
             {AGENT_DESKS.map((desk) => (
               <article key={desk.region} className="panel p-6">
