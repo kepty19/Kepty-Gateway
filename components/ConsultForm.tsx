@@ -57,6 +57,31 @@ export function ConsultForm({ id = "consult", title, lede, context }: Props) {
               />
             </label>
             <label className="grid gap-1 text-sm text-mute">
+              年齢 *
+              <input
+                required
+                name="年齢"
+                inputMode="numeric"
+                className="w-full min-w-0 border border-gold/30 bg-transparent px-3 py-2 text-ivory outline-none focus:border-gold"
+              />
+            </label>
+            <label className="grid gap-1 text-sm text-mute">
+              現所属（前所属）チーム名 *
+              <input
+                required
+                name="現所属（前所属）チーム名"
+                className="w-full min-w-0 border border-gold/30 bg-transparent px-3 py-2 text-ivory outline-none focus:border-gold"
+              />
+            </label>
+            <label className="grid gap-1 text-sm text-mute">
+              ポジション *
+              <input
+                required
+                name="ポジション"
+                className="w-full min-w-0 border border-gold/30 bg-transparent px-3 py-2 text-ivory outline-none focus:border-gold"
+              />
+            </label>
+            <label className="grid gap-1 text-sm text-mute">
               Email *
               <input
                 required
