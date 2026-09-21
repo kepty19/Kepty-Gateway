@@ -34,27 +34,31 @@ jobs:
           cp CNAME out/CNAME
           touch out/.nojekyll
       - name: Publish static site to main
+        continue-on-error: true
         run: |
-          set -euo pipefail
-          rsync -a out/ ./
+          set -uo pipefail
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- \
-            .nojekyll CNAME \
-            index.html index.txt \
-            404.html 404 \
-            sitemap.xml robots.txt favicon.ico \
-            _next assets flags \
-            pro junior company privacy
+          rsync -a out/ ./
+          paths=(.nojekyll CNAME index.html index.txt 404.html 404 sitemap.xml robots.txt favicon.ico _next assets flags pro junior company privacy)
+          existing=()
+          for path in "${paths[@]}"; do
+            if [ -e "$path" ]; then
+              existing+=("$path")
+            fi
+          done
+          git add -- "${existing[@]}"
           if git diff --cached --quiet; then
             echo "Published files unchanged"
             exit 0
           fi
           git commit -m "chore: publish static site [skip ci]"
-          git pull --rebase origin main
           git push origin HEAD:main
-      - uses: peaceiris/actions-gh-pages@v4
+      - name: Publish GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
           force_orphan: true
+          cname: keptyfootballclub.com
