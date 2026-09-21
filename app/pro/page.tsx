@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { LeagueExplorer } from "@/components/LeagueExplorer";
 import { ConsultForm } from "@/components/ConsultForm";
 import { ListingDisclaimer } from "@/components/ListingDisclaimer";
-import { AGENT_DESKS } from "@/data/agents";
+import { PartnerDirectory } from "@/components/PartnerDirectory";
+import listings from "@/data/listings.json";
 
 export const metadata: Metadata = {
   title: "プロ・大人世代",
@@ -32,17 +33,9 @@ export default function ProPage() {
 
       <section className="border-t border-gold/20 px-5 py-20 md:px-10">
         <div className="mx-auto min-w-0 max-w-page">
-          <div className="grid gap-4 md:grid-cols-2">
-            {AGENT_DESKS.map((desk) => (
-              <article key={desk.region} className="panel p-6">
-                <p className="kicker">{desk.region}</p>
-                <h3 className="mt-2 font-display text-2xl italic">{desk.title}</h3>
-                <p className="mt-3 text-sm text-gold">{desk.focus}</p>
-                <p className="mt-3 text-sm text-mute">{desk.strength}</p>
-                <p className="mt-4 text-xs text-mute/80">{desk.note}</p>
-              </article>
-            ))}
-          </div>
+          <p className="kicker mb-4">Companies, clubs & agents</p>
+          <h2 className="mb-10 font-mincho text-3xl md:text-4xl">企業・クラブ・代理人</h2>
+          <PartnerDirectory kind="pro" initialItems={listings.pro} />
           <ListingDisclaimer />
         </div>
       </section>

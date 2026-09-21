@@ -66,10 +66,10 @@ export function ConsultForm({ id = "consult", title, lede, context }: Props) {
               />
             </label>
             <label className="grid gap-1 text-sm text-mute">
-              現所属（前所属）チーム名 *
+              現所属（前所属）チーム *
               <input
                 required
-                name="現所属（前所属）チーム名"
+                name="現所属（前所属）チーム"
                 className="w-full min-w-0 border border-gold/30 bg-transparent px-3 py-2 text-ivory outline-none focus:border-gold"
               />
             </label>
