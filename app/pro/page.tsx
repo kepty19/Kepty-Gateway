@@ -3,7 +3,7 @@ import { LeagueExplorer } from "@/components/LeagueExplorer";
 import { ConsultForm } from "@/components/ConsultForm";
 import { ListingDisclaimer } from "@/components/ListingDisclaimer";
 import { PartnerDirectory } from "@/components/PartnerDirectory";
-import listings from "@/data/listings.json";
+import { PRO_LISTINGS } from "@/data/listings-data";
 
 export const metadata: Metadata = {
   title: "プロ・大人世代",
@@ -35,7 +35,7 @@ export default function ProPage() {
         <div className="mx-auto min-w-0 max-w-page">
           <p className="kicker mb-4">Companies, clubs & agents</p>
           <h2 className="mb-10 font-mincho text-3xl md:text-4xl">企業・クラブ・代理人</h2>
-          <PartnerDirectory kind="pro" initialItems={listings.pro} />
+          <PartnerDirectory kind="pro" initialItems={PRO_LISTINGS} />
           <ListingDisclaimer />
         </div>
       </section>

@@ -27,25 +27,26 @@ export function PartnerDirectory({ kind, initialItems }: Props) {
   useEffect(() => {
     const handler = `keptyListings_${kind}_${Math.random().toString(36).slice(2)}`;
     const script = document.createElement("script");
-    (window as Window & Record<string, unknown>)[handler] = (payload: unknown) => {
+    const runtime = window as unknown as Record<string, (payload: unknown) => void>;
+    runtime[handler] = (payload: unknown) => {
       try {
         const next = parseGvizListings(payload as { table?: { rows?: { c?: ({ v?: unknown } | null)[] }[] } }, kind);
         if (next.length) setItems(next);
       } catch {
         // Keep the last synced snapshot.
       } finally {
-        delete (window as Window & Record<string, unknown>)[handler];
+        delete runtime[handler];
       }
     };
     script.src = gvizUrl(kind, handler);
     script.async = true;
     script.onerror = () => {
-      delete (window as Window & Record<string, unknown>)[handler];
+      delete runtime[handler];
     };
     document.body.appendChild(script);
     return () => {
       script.remove();
-      delete (window as Window & Record<string, unknown>)[handler];
+      delete runtime[handler];
     };
   }, [kind]);
 

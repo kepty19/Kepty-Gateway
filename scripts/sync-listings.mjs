@@ -4,7 +4,8 @@ import { fileURLToPath } from "node:url";
 
 const SHEET_ID = "1Yct4te5NS4dQu3JJlHDgOwPb0ZSmGd6AXQpoev5fV5U";
 const HEADER_NAME = "企業名（クラブ・代理人名）";
-const OUT = resolve(dirname(fileURLToPath(import.meta.url)), "../data/listings.json");
+const OUT_JSON = resolve(dirname(fileURLToPath(import.meta.url)), "../data/listings.json");
+const OUT_TS = resolve(dirname(fileURLToPath(import.meta.url)), "../data/listings-data.ts");
 
 const TABS = {
   pro: "プロ・大人",
@@ -80,7 +81,7 @@ async function fetchTab(name) {
 
 async function previousFile() {
   try {
-    return JSON.parse(await readFile(OUT, "utf8"));
+    return JSON.parse(await readFile(OUT_JSON, "utf8"));
   } catch {
     return { pro: [], junior: [] };
   }
@@ -99,7 +100,15 @@ async function main() {
     if (!next.pro.length && !next.junior.length) {
       throw new Error("sheet returned no listing rows");
     }
-    await writeFile(OUT, `${JSON.stringify(next, null, 2)}\n`);
+    await writeFile(OUT_JSON, `${JSON.stringify(next, null, 2)}\n`);
+    await writeFile(
+      OUT_TS,
+      `import type { ListingItem } from "@/lib/sheet-listings";\n\nexport const PRO_LISTINGS: ListingItem[] = ${JSON.stringify(
+        next.pro,
+        null,
+        2
+      )};\n\nexport const JUNIOR_LISTINGS: ListingItem[] = ${JSON.stringify(next.junior, null, 2)};\n`
+    );
     console.log(`synced listings: pro=${next.pro.length} junior=${next.junior.length}`);
   } catch (error) {
     if (previous.pro?.length || previous.junior?.length) {

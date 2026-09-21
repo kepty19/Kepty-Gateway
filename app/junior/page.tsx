@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ConsultForm } from "@/components/ConsultForm";
 import { ListingDisclaimer } from "@/components/ListingDisclaimer";
 import { PartnerDirectory } from "@/components/PartnerDirectory";
-import listings from "@/data/listings.json";
+import { JUNIOR_LISTINGS } from "@/data/listings-data";
 
 export const metadata: Metadata = {
   title: "ユース・アカデミー世代",
@@ -32,7 +32,7 @@ export default function JuniorPage() {
 
       <section className="px-5 py-16 md:px-10">
         <div className="mx-auto min-w-0 max-w-page">
-          <PartnerDirectory kind="junior" initialItems={listings.junior} />
+          <PartnerDirectory kind="junior" initialItems={JUNIOR_LISTINGS} />
           <ListingDisclaimer />
         </div>
       </section>
